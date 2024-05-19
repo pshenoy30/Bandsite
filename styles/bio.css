@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Avernir;
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("woff2"), url("/assets/Font/AvenirNextLTPro-Regular.otf") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avernir;
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("woff2"), url("/assets/Font/AvenirNextLTPro-Demi.otf") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avernir;
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("woff2"), url("/assets/Font/AvenirNextLTPro-Bold.otf") format("woff");
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+header {
+  background-color: #323232;
+}
+
+.logo {
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  padding: 0 1rem 1rem 1rem;
+}
+nav ul li a {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-decoration: none;
+}/*# sourceMappingURL=bio.css.map */

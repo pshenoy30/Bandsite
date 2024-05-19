@@ -1,0 +1,43 @@
+@use 'mixins';
+@use 'typography';
+@use 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-stack;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+header{
+    background-color: variables.$BandSite-Black;
+}
+
+.logo {
+    padding: variables.$Mobile-Headlines-Padding-Before 1rem variables.$Mobile-Headlines-Padding-After 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: variables.$BandSite-White;
+    font-size: variables.$Mobile-Header-Text-Size;
+    line-height: variables.$Mobile-Header-Line-Height;
+}
+
+nav{
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        li{
+            list-style: none;
+            padding: 0 1rem variables.$Mobile-Headlines-Padding-After 1rem;
+            a{
+                color: variables.$BandSite-White;
+                font-size: variables.$Mobile-Header-Text-Size;
+                line-height: variables.$Mobile-Header-Line-Height;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
