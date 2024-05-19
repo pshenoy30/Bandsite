@@ -28,12 +28,8 @@ header {
 }
 
 .logo {
-  padding: 1.5rem 1rem 1rem 1rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
   text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  padding: 1rem 5rem 0 5rem;
 }
 
 nav ul {
@@ -46,15 +42,46 @@ nav ul li {
   padding: 1.5rem 1rem 1rem 1rem;
 }
 nav ul li a {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
   color: #FFFFFF;
   text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.footer-container {
+  background-color: #323232;
+  padding: 1rem;
+  color: #FFFFFF;
+}
+.footer-container__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-transform: none;
+}
+.footer-container__icon-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.footer-container__icon-container__icon img {
+  width: 2rem;
+  height: 2rem;
+}
+.footer-container h3 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+.footer-container article {
+  padding: 1rem 0;
+}
+.footer-container__logo {
+  padding: 2rem 0 1rem 0;
+  text-align: left;
 }
 
 .div__image {
@@ -91,6 +118,10 @@ img {
   color: #000000;
   font-size: 1.5rem;
   font-weight: 700;
+}
+.about-section img {
+  width: 100%;
+  height: 100%;
 }
 .about-section__quote {
   font-size: 0.875rem;
@@ -130,4 +161,8 @@ img {
   line-height: 2rem;
   font-weight: 700;
   padding-left: 1rem;
+}
+.photo-gallery img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=bio.css.map */

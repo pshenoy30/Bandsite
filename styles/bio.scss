@@ -3,10 +3,6 @@
 @use './partials/typography';
 @use './partials/variables';
 
-img{
-    width: 100%;
-    height: 100%;
-}
 
 .div__image{
     object-fit: cover;
@@ -39,6 +35,10 @@ img{
         color: variables.$BandSite-DarkBlack;
         font-size: variables.$Mobile-Header-Text-Size;
         font-weight: 700;
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
     &__quote{
         font-size: variables.$Mobile-Subheader-Text-Size;
@@ -78,5 +78,9 @@ img{
         line-height: variables.$Mobile-Header-Line-Height;
         font-weight:700;
         padding-left: variables.$Mobile-Padding;
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
 }

@@ -17,12 +17,8 @@ header{
 }
 
 .logo {
-    padding: variables.$Mobile-Headlines-Padding-Before variables.$Mobile-Padding variables.$Mobile-Padding variables.$Mobile-Padding;
-    font-size: variables.$Mobile-Header-Text-Size;
-    line-height: variables.$Mobile-Header-Line-Height;
-    text-align: center;
-    text-transform: uppercase;
-    color: variables.$BandSite-White;
+    text-align:center;
+    padding: 1rem 5rem 0 5rem;
 }
 
 nav{
@@ -34,12 +30,51 @@ nav{
             list-style: none;
             padding: variables.$Mobile-Headlines-Padding-Before variables.$Mobile-Padding variables.$Mobile-Padding variables.$Mobile-Padding;
             a{
-                font-size: variables.$Mobile-Subheader-Text-Size;
-                line-height: variables.$Mobile-Subheader-Line-Height;
                 color: variables.$BandSite-White;
                 text-decoration: none;
+                font-size: variables.$Mobile-Header-Text-Size;
+                line-height: variables.$Mobile-Header-Line-Height;
             }
         }
     }
+}
+
+.footer-container{
+    background-color: variables.$BandSite-Black;
+    padding: variables.$Mobile-Padding;
+    color: variables.$BandSite-White;
+    &__title{
+        font-size: variables.$Mobile-Header-Text-Size;
+        line-height: variables.$Mobile-Header-Line-Height;
+        font-weight: 700;
+        text-transform: none;
+    }
+    &__icon-container{
+        padding: variables.$Mobile-Padding;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: variables.$Mobile-Padding 0;
+        &__icon{
+            img{
+                width: 2rem;
+                height: 2rem;
+            }
+        }     
+    }
+    h3{
+        font-size: variables.$Mobile-Subheader-Text-Size;
+        line-height: variables.$Mobile-Subheader-Line-Height;
+        font-weight: 700;
+        padding: variables.$Mobile-Padding 0;
+    }
+    article{
+        padding: variables.$Mobile-Padding 0;
+    }
+    &__logo{
+        padding: 2rem 0 variables.$Mobile-Padding 0;
+        text-align: left;
+    }
+
 }
 
