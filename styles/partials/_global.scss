@@ -6,6 +6,8 @@
     margin: 0;
     padding: 0;
     font-family: variables.$font-stack;
+    font-size: variables.$Mobile-Copy-Text-Size;
+    line-height: variables.$Mobile-Copy-Line-Height;
     font-weight: 400;
     text-transform: capitalize;
 }

@@ -33,29 +33,50 @@ img{
     }
 }
 
-.quote-section{
+.about-section{
+    padding: variables.$Mobile-Padding;
     &__title{
         color: variables.$BandSite-DarkBlack;
-        font-size: variables.$Mobile-Subheader-Text-Size ;
+        font-size: variables.$Mobile-Header-Text-Size;
         font-weight: 700;
-        padding: variables.$Mobile-Headlines-Padding-Before 0 variables.$Mobile-Padding variables.$Mobile-Padding;
     }
     &__quote{
-        padding: variables.$Mobile-Padding;
+        font-size: variables.$Mobile-Subheader-Text-Size;
+        line-height: variables.$Mobile-Subheader-Line-Height;
         q{
             font-weight: 700;
             color: variables.$BandSite-DarkBlack;
             text-align: justify;
+            text-transform: none;
         }
         p{
             font-weight: 700;
             color: variables.$BandSite-DarkBlack;
             text-align: justify;
-            padding: variables.$Mobile-Padding 0;
+            padding-top: variables.$Mobile-Padding;
+            text-transform: none;
         }
+    }
+    &__sub-title{
+        font-size: variables.$Mobile-Subheader-Text-Size;
+        line-height: variables.$Mobile-Subheader-Line-Height;
+        font-weight: 500;
+        color: variables.$BandSite-DarkBlack;
+        padding-bottom: variables.$Mobile-Padding;
+    }
+    p{
+        color: variables.$BandSite-DarkBlack;
+        padding-bottom: variables.$Mobile-Padding;
+        text-transform: none;
     }
 }
 
-.about-section{
-
+.photo-gallery{
+    background-color: variables.$BandSite-Alabaster;
+    &__title{
+        font-size: variables.$Mobile-Header-Text-Size;
+        line-height: variables.$Mobile-Header-Line-Height;
+        font-weight:700;
+        padding-left: variables.$Mobile-Padding;
+    }
 }
