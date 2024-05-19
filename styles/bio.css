@@ -27,11 +27,11 @@ header {
 
 .logo {
   padding: 1.5rem 1rem 1rem 1rem;
+  font-size: 3.5rem;
+  line-height: 2rem;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 nav ul {
@@ -41,11 +41,25 @@ nav ul {
 }
 nav ul li {
   list-style: none;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 nav ul li a {
+  font-size: 1.75rem;
+  line-height: 1.375rem;
   color: #FFFFFF;
-  font-size: 1.5rem;
-  line-height: 2rem;
   text-decoration: none;
+}
+
+.hero-section {
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 38vh;
+}
+.hero-section__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 15rem 0 15rem 1rem;
+  font-size: 3.5rem;
 }/*# sourceMappingURL=bio.css.map */

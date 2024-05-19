@@ -16,11 +16,11 @@ header{
 
 .logo {
     padding: variables.$Mobile-Headlines-Padding-Before 1rem variables.$Mobile-Headlines-Padding-After 1rem;
+    font-size: variables.$Mobile-Header-Text-Size;
+    line-height: variables.$Mobile-Header-Line-Height;
     text-align: center;
     text-transform: uppercase;
     color: variables.$BandSite-White;
-    font-size: variables.$Mobile-Header-Text-Size;
-    line-height: variables.$Mobile-Header-Line-Height;
 }
 
 nav{
@@ -30,11 +30,11 @@ nav{
         align-items: center;
         li{
             list-style: none;
-            padding: 0 1rem variables.$Mobile-Headlines-Padding-After 1rem;
+            padding: variables.$Mobile-Headlines-Padding-Before 1rem variables.$Mobile-Headlines-Padding-After 1rem;
             a{
+                font-size: variables.$Mobile-Subheader-Text-Size;
+                line-height: variables.$Mobile-Subheader-Line-Height;
                 color: variables.$BandSite-White;
-                font-size: variables.$Mobile-Header-Text-Size;
-                line-height: variables.$Mobile-Header-Line-Height;
                 text-decoration: none;
             }
         }

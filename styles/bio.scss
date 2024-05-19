@@ -1,2 +1,18 @@
 @use './partials/global';
+@use './partials/mixins';
+@use './partials/typography';
+@use './partials/variables';
 
+.hero-section{
+    background-image: url("/assets/Images/hero-bio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 38vh;
+    &__title{
+        color: variables.$BandSite-White;
+        font-weight: 700;
+        padding: 15rem 0 15rem 1rem;
+        font-size: variables.$Mobile-Header-Text-Size;
+    }
+}
