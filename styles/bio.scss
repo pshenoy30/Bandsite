@@ -3,16 +3,59 @@
 @use './partials/typography';
 @use './partials/variables';
 
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.div__image{
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    margin: 1rem;
+}
+
 .hero-section{
     background-image: url("/assets/Images/hero-bio.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     width: 100vw;
-    height: 38vh;
+    height: 30vh;
     &__title{
         color: variables.$BandSite-White;
         font-weight: 700;
-        padding: 15rem 0 15rem 1rem;
+        position: relative;
+        top:50%;
+        left: 1rem;
         font-size: variables.$Mobile-Header-Text-Size;
+        padding-right: variables.$Mobile-Padding;
     }
+}
+
+.quote-section{
+    &__title{
+        color: variables.$BandSite-DarkBlack;
+        font-size: variables.$Mobile-Subheader-Text-Size ;
+        font-weight: 700;
+        padding: variables.$Mobile-Headlines-Padding-Before 0 variables.$Mobile-Padding variables.$Mobile-Padding;
+    }
+    &__quote{
+        padding: variables.$Mobile-Padding;
+        q{
+            font-weight: 700;
+            color: variables.$BandSite-DarkBlack;
+            text-align: justify;
+        }
+        p{
+            font-weight: 700;
+            color: variables.$BandSite-DarkBlack;
+            text-align: justify;
+            padding: variables.$Mobile-Padding 0;
+        }
+    }
+}
+
+.about-section{
+
 }
