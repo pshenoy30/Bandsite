@@ -1,5 +1,5 @@
 @use './partials/global';
-@use './partials/mixins';
+@use './partials/mixins' as *;
 @use './partials/typography';
 @use './partials/variables';
 
@@ -8,32 +8,71 @@
     object-fit: cover;
     object-position: center;
     overflow: hidden;
-    margin: 1rem;
+    margin: variables.$Mobile-Padding;
+    @include tablet{
+        padding: 0 variables.$Tablet-Padding;
+    }
+    @include desktop{
+        padding: 0 variables.$Tablet-Padding;
+    }
+    
 }
 
 .hero-section{
     background-image: url("/assets/Images/hero-bio.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     width: 100vw;
     height: 30vh;
+    @include tablet{
+        height: 70vh;
+    }
+    @include desktop{
+        height: 70vh;
+    }
+    
     &__title{
         color: variables.$BandSite-White;
         font-weight: 700;
         position: relative;
         top:50%;
         left: 1rem;
-        font-size: variables.$Mobile-Header-Text-Size;
-        padding-right: variables.$Mobile-Padding;
+        font-size: variables.$Mobile-Page-Header-Text-Size;
+        line-height: variables.$Mobile-Page-Header-Text-Size;
+        padding-left: variables.$Mobile-Padding;
+        @include tablet{
+            font-size: variables.$Tablet-Page-Header-Text-Size;
+            line-height: variables.$Tablet-Page-Header-Line-Height;
+            padding-left: variables.$Tablet-Padding;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Page-Header-Text-Size;
+            line-height: variables.$Tablet-Page-Header-Line-Height;
+            padding-left: variables.$Tablet-Padding;
+        }
     }
 }
 
 .about-section{
     padding: variables.$Mobile-Padding;
+    @include tablet{
+        padding: variables.$Tablet-Padding;
+    }
+    @include desktop{
+        padding: variables.$Tablet-Padding;
+    }
     &__title{
         color: variables.$BandSite-DarkBlack;
-        font-size: variables.$Mobile-Header-Text-Size;
+        font-size: variables.$Mobile-Section-Header-Text-Size;
+        @include tablet{
+            font-size: variables.$Tablet-Section-Header-Text-Size;
+            line-height: variables.$Tablet-Section-Header-Line-Height;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Section-Header-Text-Size;
+            line-height: variables.$Tablet-Section-Header-Line-Height;
+        }
         font-weight: 700;
     }
     img{
@@ -43,44 +82,141 @@
     &__quote{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
+        @include tablet{
+            font-size: variables.$Tablet-Section-Header-Text-Size;
+            line-height: variables.$Tablet-Subheader-Line-Height;
+            padding: 0 3.25rem;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Subheader-Text-Size;
+            line-height: variables.$Tablet-Subheader-Line-Height;
+            padding: 0 3.25rem;
+        }
         q{
+            font-size: variables.$Mobile-Subheader-Text-Size;
+            line-height: variables.$Mobile-Subheader-Line-Height;
+            @include tablet{
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
+            @include desktop{
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
             font-weight: 700;
             color: variables.$BandSite-DarkBlack;
             text-align: justify;
             text-transform: none;
         }
         p{
-            font-weight: 700;
+            font-size: variables.$Mobile-Subheader-Text-Size;
+            line-height: variables.$Mobile-Subheader-Line-Height;
+            padding-top: variables.$Mobile-Padding;
+            @include tablet{
+                padding-top: variables.$Tablet-Padding;
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
+            @include desktop{
+                padding-top: variables.$Tablet-Padding;
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
+            font-weight: 600;
             color: variables.$BandSite-DarkBlack;
             text-align: justify;
-            padding-top: variables.$Mobile-Padding;
             text-transform: none;
         }
     }
     &__sub-title{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
-        font-weight: 500;
-        color: variables.$BandSite-DarkBlack;
         padding-bottom: variables.$Mobile-Padding;
+        @include tablet{
+            font-size: variables.$Tablet-Subheader-Text-Size;
+            line-height: variables.$Tablet-Subheader-Line-Height;
+            padding: variables.$Tablet-Padding 3.25rem variables.$Tablet-Padding 3.25rem;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Subheader-Text-Size;
+            line-height: variables.$Tablet-Subheader-Line-Height;
+            padding: variables.$Tablet-Padding 3.25rem variables.$Tablet-Padding 3.25rem;
+        }
+        font-weight: 600;
+        color: variables.$BandSite-DarkBlack;
     }
-    p{
-        color: variables.$BandSite-DarkBlack;
-        padding-bottom: variables.$Mobile-Padding;
-        text-transform: none;
+    article{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 48rem;
+        }
+        @include desktop{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p{
+            color: variables.$BandSite-DarkBlack;
+            padding-bottom: variables.$Mobile-Padding;
+            @include tablet{
+                padding: 0 3.25rem variables.$Tablet-Padding 3.25rem;
+            }
+            @include desktop{
+                padding: 0 3.25rem variables.$Tablet-Padding 3.25rem;
+            }
+            text-transform: none;
+        }
     }
 }
 
 .photo-gallery{
     background-color: variables.$BandSite-Alabaster;
     &__title{
-        font-size: variables.$Mobile-Header-Text-Size;
-        line-height: variables.$Mobile-Header-Line-Height;
-        font-weight:700;
+        font-size: variables.$Mobile-Section-Header-Text-Size;
+        line-height: variables.$Mobile-Section-Header-Line-Height;
         padding-left: variables.$Mobile-Padding;
+        @include tablet{
+            font-size: variables.$Tablet-Section-Header-Text-Size;
+            line-height: variables.$Tablet-Section-Header-Line-Height;
+            padding-left: variables.$Tablet-Padding;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Section-Header-Text-Size;
+            line-height: variables.$Tablet-Section-Header-Line-Height;
+            padding-left: variables.$Tablet-Padding;
+        }
+        font-weight:700;
     }
-    img{
-        width: 100%;
-        height: 100%;
+    @include tablet{
+        &__image-container{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 variables.$Tablet-Padding variables.$Tablet-Padding variables.$Tablet-Padding;
+            .div__image{
+                flex-basis: 28%;
+                padding: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @include desktop{
+        &__image-container{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 variables.$Tablet-Padding variables.$Tablet-Padding variables.$Tablet-Padding;
+            .div__image{
+                flex-basis: 28%;
+                padding: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }

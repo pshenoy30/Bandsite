@@ -1,4 +1,4 @@
-@use 'mixins';
+@use 'mixins' as *;
 @use 'typography';
 @use 'variables';
 
@@ -6,14 +6,32 @@
     margin: 0;
     padding: 0;
     font-family: variables.$font-stack;
-    font-size: variables.$Mobile-Copy-Text-Size;
-    line-height: variables.$Mobile-Copy-Line-Height;
+    font-size: variables.$Mobile-Body-Copy-Text-Size;
+    line-height: variables.$Mobile-Body-Copy-Line-Height;
+    @include tablet{
+        font-size: variables.$Tablet-Body-Copy-Text-Size;
+        line-height: variables.$Tablet-Body-Copy-Line-Height;
+    }
+    @include desktop{
+        font-size: variables.$Tablet-Body-Copy-Text-Size;
+        line-height: variables.$Tablet-Body-Copy-Line-Height;
+    }
     font-weight: 400;
     text-transform: capitalize;
 }
 
 header{
     background-color: variables.$BandSite-Black;
+    @include tablet{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    @include desktop{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
 }
 
 .logo {
@@ -29,11 +47,25 @@ nav{
         li{
             list-style: none;
             padding: variables.$Mobile-Headlines-Padding-Before variables.$Mobile-Padding variables.$Mobile-Padding variables.$Mobile-Padding;
+            @include tablet{
+                padding: variables.$Tablet-Headlines-Padding-Before variables.$Tablet-Padding variables.$Tablet-Padding variables.$Tablet-Padding;
+            }
+            @include desktop{
+                padding: variables.$Tablet-Headlines-Padding-Before variables.$Tablet-Padding variables.$Tablet-Padding variables.$Tablet-Padding;
+            }
             a{
                 color: variables.$BandSite-White;
                 text-decoration: none;
-                font-size: variables.$Mobile-Header-Text-Size;
-                line-height: variables.$Mobile-Header-Line-Height;
+                font-size: variables.$Mobile-Section-Header-Text-Size;
+                line-height: variables.$Mobile-Section-Header-Line-Height;
+                @include tablet{
+                    font-size: variables.$Tablet-Section-Header-Text-Size;
+                    line-height: variables.$Tablet-Section-Header-Line-Height;
+                }
+                @include desktop{
+                    font-size: variables.$Tablet-Section-Header-Text-Size;
+                    line-height: variables.$Tablet-Section-Header-Line-Height;
+                }
             }
         }
     }
@@ -41,20 +73,40 @@ nav{
 
 .footer-container{
     background-color: variables.$BandSite-Black;
-    padding: variables.$Mobile-Padding;
     color: variables.$BandSite-White;
+    padding: variables.$Mobile-Padding;
+    @include tablet{
+        padding: variables.$Tablet-Padding;    
+    }
+    @include desktop{
+        padding: variables.$Tablet-Padding;    
+    }
+
     &__title{
-        font-size: variables.$Mobile-Header-Text-Size;
-        line-height: variables.$Mobile-Header-Line-Height;
+        font-size: variables.$Mobile-Page-Header-Text-Size;
+        line-height: variables.$Mobile-Page-Header-Line-Height;
+        @include tablet{
+            font-size: variables.$Tablet-Page-Header-Text-Size;
+            line-height: variables.$Tablet-Page-Header-Line-Height;
+        }
+        @include desktop{
+            font-size: variables.$Tablet-Page-Header-Text-Size;
+            line-height: variables.$Tablet-Page-Header-Line-Height;
+        }
         font-weight: 700;
         text-transform: none;
     }
     &__icon-container{
-        padding: variables.$Mobile-Padding;
         display: flex;
         align-items: center;
         gap: 1rem;
         padding: variables.$Mobile-Padding 0;
+        @include tablet{
+            padding: variables.$Tablet-Padding 0;  
+        }
+        @include desktop{
+            padding: variables.$Tablet-Padding 0;  
+        }
         &__icon{
             img{
                 width: 2rem;
@@ -65,15 +117,78 @@ nav{
     h3{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
+
         font-weight: 700;
         padding: variables.$Mobile-Padding 0;
+        @include tablet{
+            padding: 0;  
+        }
+        @include desktop{
+            padding: 0;  
+        }
     }
     article{
         padding: variables.$Mobile-Padding 0;
+        @include tablet{
+            padding: variables.$Tablet-Padding 0;  
+        }
+        @include desktop{
+            padding: variables.$Tablet-Padding 0;  
+        }
     }
     &__logo{
         padding: 2rem 0 variables.$Mobile-Padding 0;
+        @include tablet{
+            padding: 2rem 0 variables.$Tablet-Padding 0; 
+            position: relative;
+            bottom: 16.5rem;
+            left: 40rem; 
+        }
+        @include desktop{
+            padding: 2rem 0 variables.$Tablet-Padding 0; 
+            position: relative;
+            bottom: 16.5rem;
+            left: 40rem;  
+        }
         text-align: left;
+    }
+    @include tablet{
+        &__get-in-touch-container{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        &__icon-container{
+            gap: 2rem;
+        }
+        &__agencies{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__copyright{
+            position: relative;
+            bottom: 3rem;
+        }
+    }
+    @include desktop{
+        &__get-in-touch-container{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        &__icon-container{
+            gap: 2rem;
+        }
+        &__agencies{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__copyright{
+            position: relative;
+            bottom: 3rem;
+        }
     }
 
 }
