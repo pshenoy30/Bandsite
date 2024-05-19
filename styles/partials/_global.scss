@@ -31,6 +31,7 @@ header{
         display: flex;
         justify-content: left;
         align-items: center;
+        padding-left: variables.$Desktop-Padding;
     }
 }
 
@@ -79,7 +80,7 @@ nav{
         padding: variables.$Tablet-Padding;    
     }
     @include desktop{
-        padding: variables.$Tablet-Padding;    
+        padding:  2.25rem 12.25rem;    
     }
 
     &__title{
@@ -148,7 +149,7 @@ nav{
             padding: 2rem 0 variables.$Tablet-Padding 0; 
             position: relative;
             bottom: 16.5rem;
-            left: 40rem;  
+            left: 55rem;  
         }
         text-align: left;
     }
@@ -182,8 +183,9 @@ nav{
         }
         &__agencies{
             display: flex;
-            justify-content: space-between;
+            justify-content: left;
             align-items: center;
+            gap: 9rem;
         }
         &__copyright{
             position: relative;
