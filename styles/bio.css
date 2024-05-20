@@ -37,12 +37,14 @@
 
 header {
   background-color: #323232;
+  width: 74%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   header {
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 100vw;
   }
 }
 @media (min-width: 1280px) {
@@ -51,6 +53,7 @@ header {
     justify-content: left;
     align-items: center;
     padding-left: 6rem;
+    width: 93.5%;
   }
 }
 
@@ -101,20 +104,24 @@ nav ul li a {
   background-color: #323232;
   color: #FFFFFF;
   padding: 1rem;
+  width: 71%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container {
-    padding: 2.25rem;
+    padding: 2.25rem 2.25rem 2.25rem 4rem;
+    width: 100%;
   }
 }
 @media (min-width: 1280px) {
   .footer-container {
     padding: 2.25rem 12.25rem;
+    width: 100%;
   }
 }
 .footer-container__title {
   font-size: 1.5rem;
   line-height: 2rem;
+  padding-left: 1rem;
   font-weight: 700;
   text-transform: none;
 }
@@ -134,7 +141,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container__icon-container {
@@ -154,11 +161,11 @@ nav ul li a {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 700;
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container h3 {
-    padding: 0;
+    padding-left: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -167,7 +174,7 @@ nav ul li a {
   }
 }
 .footer-container article {
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 0;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container article {
@@ -179,15 +186,18 @@ nav ul li a {
     padding: 2.25rem 0;
   }
 }
+.footer-container p {
+  padding: 1rem 0 1rem 1rem;
+}
 .footer-container__logo {
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0 1rem 1rem;
   text-align: left;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container__logo {
     padding: 2rem 0 2.25rem 0;
     position: relative;
-    bottom: 16.5rem;
+    bottom: 24.5rem;
     left: 40rem;
   }
 }
@@ -195,9 +205,12 @@ nav ul li a {
   .footer-container__logo {
     padding: 2rem 0 2.25rem 0;
     position: relative;
-    bottom: 16.5rem;
+    bottom: 22.5rem;
     left: 55rem;
   }
+}
+.footer-container__copyright {
+  font-size: 0.625rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer-container__get-in-touch-container {
@@ -246,11 +259,12 @@ nav ul li a {
      object-position: center;
   overflow: hidden;
   margin: 1rem;
+  width: 65%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .div__image {
     padding: 0 2.25rem;
-    width: 60%;
+    width: 100%;
   }
 }
 @media (min-width: 1280px) {
@@ -261,7 +275,7 @@ nav ul li a {
 }
 
 .hero-section {
-  background-image: url("/assets/Images/hero-bio.jpg");
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("/assets/Images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -317,6 +331,7 @@ nav ul li a {
   }
 }
 .about-section__title {
+  padding-left: 1rem;
   color: #000000;
   font-size: 1.5rem;
   font-weight: 700;
@@ -341,12 +356,15 @@ nav ul li a {
 .about-section__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
+  width: 70%;
+  padding: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .about-section__quote {
     font-size: 2.25rem;
     line-height: 2rem;
     padding: 0 3.25rem;
+    width: 100%;
   }
 }
 @media (min-width: 1280px) {
@@ -404,6 +422,7 @@ nav ul li a {
   font-size: 0.875rem;
   line-height: 1.375rem;
   padding-bottom: 1rem;
+  padding-left: 1rem;
   font-weight: 600;
   color: #000000;
 }
@@ -420,6 +439,10 @@ nav ul li a {
     line-height: 2rem;
     padding: 2.25rem 3.25rem 2.25rem 12.25rem;
   }
+}
+.about-section article {
+  padding-left: 1rem;
+  width: 72%;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .about-section article {
@@ -456,6 +479,12 @@ nav ul li a {
 
 .photo-gallery {
   background-color: #FAFAFA;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery {
+    padding-left: 4rem;
+  }
 }
 @media (min-width: 1280px) {
   .photo-gallery {
@@ -481,6 +510,12 @@ nav ul li a {
     line-height: 2.75rem;
     padding-left: 2.25rem;
   }
+}
+.photo-gallery .div__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__image-container {

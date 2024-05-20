@@ -9,9 +9,10 @@
     object-position: center;
     overflow: hidden;
     margin: variables.$Mobile-Padding;
+    width:65%;
     @include tablet{
         padding: 0 variables.$Tablet-Padding;
-        width: 60%;
+        width: 100%;
     }
     @include desktop{
         padding: 0 11.5rem;
@@ -21,7 +22,7 @@
 }
 
 .hero-section{
-    background-image: url("/assets/Images/hero-bio.jpg");
+    background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -64,6 +65,7 @@
         padding: 2*variables.$Tablet-Padding;
     }
     &__title{
+        padding-left:variables.$Mobile-Padding;
         color: variables.$BandSite-DarkBlack;
         font-size: variables.$Mobile-Section-Header-Text-Size;
         @include tablet{
@@ -84,10 +86,13 @@
     &__quote{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
+        width: 70%;
+        padding: 1rem;
         @include tablet{
             font-size: variables.$Tablet-Section-Header-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
             padding: 0 3.25rem;
+            width: 100%;
         }
         @include desktop{
             font-size: variables.$Tablet-Subheader-Text-Size;
@@ -135,6 +140,7 @@
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
         padding-bottom: variables.$Mobile-Padding;
+        padding-left: variables.$Mobile-Padding;
         @include tablet{
             font-size: variables.$Tablet-Subheader-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
@@ -149,6 +155,8 @@
         color: variables.$BandSite-DarkBlack;
     }
     article{
+        padding-left: variables.$Mobile-Padding;
+        width: 72%;
         @include tablet{
             display: flex;
             justify-content: space-between;
@@ -178,6 +186,10 @@
 
 .photo-gallery{
     background-color: variables.$BandSite-Alabaster;
+    padding-left: variables.$Mobile-Padding;
+    @include tablet{
+        padding-left: 4rem;
+    }
     @include desktop{
         padding: 2.25rem 9.5rem;
     }
@@ -196,6 +208,11 @@
             padding-left: variables.$Tablet-Padding;
         }
         font-weight:700;
+    }
+    .div__image img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     @include tablet{
         &__image-container{

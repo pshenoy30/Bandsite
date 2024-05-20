@@ -22,16 +22,19 @@
 
 header{
     background-color: variables.$BandSite-Black;
+    width: 74%;
     @include tablet{
         display: flex;
         justify-content: left;
         align-items: center;
+        width: 100vw;
     }
     @include desktop{
         display: flex;
         justify-content: left;
         align-items: center;
         padding-left: variables.$Desktop-Padding;
+        width: 93.5%;
     }
 }
 
@@ -76,16 +79,19 @@ nav{
     background-color: variables.$BandSite-Black;
     color: variables.$BandSite-White;
     padding: variables.$Mobile-Padding;
+    width: 71%;
     @include tablet{
-        padding: variables.$Tablet-Padding;    
+        padding: variables.$Tablet-Padding variables.$Tablet-Padding variables.$Tablet-Padding 4rem;
+        width: 100%;   
     }
     @include desktop{
-        padding:  2.25rem 12.25rem;    
+        padding:  2.25rem 12.25rem;  
+        width: 100%;  
     }
-
     &__title{
         font-size: variables.$Mobile-Page-Header-Text-Size;
         line-height: variables.$Mobile-Page-Header-Line-Height;
+        padding-left: variables.$Mobile-Padding;
         @include tablet{
             font-size: variables.$Tablet-Page-Header-Text-Size;
             line-height: variables.$Tablet-Page-Header-Line-Height;
@@ -101,7 +107,7 @@ nav{
         display: flex;
         align-items: center;
         gap: 1rem;
-        padding: variables.$Mobile-Padding 0;
+        padding: variables.$Mobile-Padding 0 variables.$Mobile-Padding variables.$Mobile-Padding;
         @include tablet{
             padding: variables.$Tablet-Padding 0;  
         }
@@ -118,18 +124,17 @@ nav{
     h3{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
-
         font-weight: 700;
-        padding: variables.$Mobile-Padding 0;
+        padding: variables.$Mobile-Padding 0 variables.$Mobile-Padding variables.$Mobile-Padding;
         @include tablet{
-            padding: 0;  
+            padding-left: 1rem;  
         }
         @include desktop{
             padding: 0;  
         }
     }
     article{
-        padding: variables.$Mobile-Padding 0;
+        padding: variables.$Mobile-Padding 0 variables.$Mobile-Padding 0;
         @include tablet{
             padding: variables.$Tablet-Padding 0;  
         }
@@ -137,21 +142,27 @@ nav{
             padding: variables.$Tablet-Padding 0;  
         }
     }
+    p {
+        padding: variables.$Mobile-Padding 0 variables.$Mobile-Padding variables.$Mobile-Padding;
+    }
     &__logo{
-        padding: 2rem 0 variables.$Mobile-Padding 0;
+        padding: 2rem 0 variables.$Mobile-Padding variables.$Mobile-Padding;
         @include tablet{
             padding: 2rem 0 variables.$Tablet-Padding 0; 
             position: relative;
-            bottom: 16.5rem;
+            bottom: 24.5rem;
             left: 40rem; 
         }
         @include desktop{
             padding: 2rem 0 variables.$Tablet-Padding 0; 
             position: relative;
-            bottom: 16.5rem;
+            bottom: 22.5rem;
             left: 55rem;  
         }
         text-align: left;
+    }
+    &__copyright{
+        font-size: variables.$Mobile-Buttons-Text-Size;
     }
     @include tablet{
         &__get-in-touch-container{
