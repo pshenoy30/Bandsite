@@ -8,17 +8,7 @@
     object-fit: cover;
     object-position: center;
     overflow: hidden;
-    margin: variables.$Mobile-Padding;
-    width:65%;
-    @include tablet{
-        padding: 0 variables.$Tablet-Padding;
-        width: 100%;
-    }
-    @include desktop{
-        padding: 0 11.5rem;
-        width: 70%;
-    }
-    
+    margin: variables.$Mobile-Padding; 
 }
 
 .hero-section{
@@ -46,7 +36,7 @@
         @include tablet{
             font-size: variables.$Tablet-Page-Header-Text-Size;
             line-height: variables.$Tablet-Page-Header-Line-Height;
-            padding-left: variables.$Tablet-Padding;
+            padding-left: variables.$Tablet-Padding-Text;
         }
         @include desktop{
             font-size: variables.$Tablet-Page-Header-Text-Size;
@@ -59,15 +49,18 @@
 .about-section{
     padding: variables.$Mobile-Padding;
     @include tablet{
-        padding: variables.$Tablet-Padding;
+        padding-left: variables.$Tablet-Padding-Text;
+        padding-right: variables.$Tablet-Padding-Text;
     }
     @include desktop{
-        padding: 2*variables.$Tablet-Padding;
+        padding-left: variables.$Desktop-Padding-Text;
+        padding-right: variables.$Desktop-Padding-Text;
     }
     &__title{
         padding-left:variables.$Mobile-Padding;
         color: variables.$BandSite-DarkBlack;
         font-size: variables.$Mobile-Section-Header-Text-Size;
+        font-weight: 700;
         @include tablet{
             font-size: variables.$Tablet-Section-Header-Text-Size;
             line-height: variables.$Tablet-Section-Header-Line-Height;
@@ -77,32 +70,34 @@
             line-height: variables.$Tablet-Section-Header-Line-Height;
             padding-left: 7rem;
         }
-        font-weight: 700;
     }
-    img{
-        width: 100%;
-        height: 100%;
+    .div__image{
+        width: 94%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
     &__quote{
         font-size: variables.$Mobile-Subheader-Text-Size;
         line-height: variables.$Mobile-Subheader-Line-Height;
-        width: 70%;
-        padding: 1rem;
+        padding: variables.$Mobile-Padding;
         @include tablet{
             font-size: variables.$Tablet-Section-Header-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
-            padding: 0 3.25rem;
-            width: 100%;
         }
         @include desktop{
             font-size: variables.$Tablet-Subheader-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
             width: 55%;
-            padding: 0 12.5rem;
         }
         q{
             font-size: variables.$Mobile-Subheader-Text-Size;
             line-height: variables.$Mobile-Subheader-Line-Height;
+            font-weight: 700;
+            color: variables.$BandSite-DarkBlack;
+            text-align: justify;
+            text-transform: none;
             @include tablet{
                 font-size: variables.$Tablet-Subheader-Text-Size;
                 line-height: variables.$Tablet-Subheader-Line-Height;
@@ -111,29 +106,23 @@
                 font-size: variables.$Tablet-Subheader-Text-Size;
                 line-height: variables.$Tablet-Subheader-Line-Height;
             }
-            font-weight: 700;
-            color: variables.$BandSite-DarkBlack;
-            text-align: justify;
-            text-transform: none;
         }
         p{
             font-size: variables.$Mobile-Subheader-Text-Size;
             line-height: variables.$Mobile-Subheader-Line-Height;
             padding-top: variables.$Mobile-Padding;
-            @include tablet{
-                padding-top: variables.$Tablet-Padding;
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
-            @include desktop{
-                padding-top: variables.$Tablet-Padding;
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
             font-weight: 600;
             color: variables.$BandSite-DarkBlack;
             text-align: justify;
             text-transform: none;
+            @include tablet{
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
+            @include desktop{
+                font-size: variables.$Tablet-Subheader-Text-Size;
+                line-height: variables.$Tablet-Subheader-Line-Height;
+            }
         }
     }
     &__sub-title{
@@ -141,22 +130,20 @@
         line-height: variables.$Mobile-Subheader-Line-Height;
         padding-bottom: variables.$Mobile-Padding;
         padding-left: variables.$Mobile-Padding;
+        font-weight: 600;
+        color: variables.$BandSite-DarkBlack;
         @include tablet{
             font-size: variables.$Tablet-Subheader-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
-            padding: variables.$Tablet-Padding 3.25rem variables.$Tablet-Padding 3.25rem;
         }
         @include desktop{
             font-size: variables.$Tablet-Subheader-Text-Size;
             line-height: variables.$Tablet-Subheader-Line-Height;
-            padding: variables.$Tablet-Padding 3.25rem variables.$Tablet-Padding 12.25rem;
         }
-        font-weight: 600;
-        color: variables.$BandSite-DarkBlack;
     }
     article{
         padding-left: variables.$Mobile-Padding;
-        width: 72%;
+        padding-right: variables.$Mobile-Padding;
         @include tablet{
             display: flex;
             justify-content: space-between;
@@ -168,18 +155,22 @@
             justify-content: space-between;
             align-items: center;
             width: 65rem;
-            padding-left: 9.25rem;
         }
         p{
             color: variables.$BandSite-DarkBlack;
             padding-bottom: variables.$Mobile-Padding;
+            text-transform: none;
+            font-size: variables.$Mobile-Body-Copy-Text-Size;
+            line-height: variables.$Mobile-Body-Copy-Line-Height;
             @include tablet{
-                padding: 0 3.25rem variables.$Tablet-Padding 3.25rem;
+                width: 48%;
+                padding-right: 5.25rem;
             }
             @include desktop{
-                padding: 0 3.25rem variables.$Tablet-Padding 3.25rem;
+                width: 48%;
+                padding-right: 5.25rem;
             }
-            text-transform: none;
+            
         }
     }
 }
@@ -187,33 +178,39 @@
 .photo-gallery{
     background-color: variables.$BandSite-Alabaster;
     padding-left: variables.$Mobile-Padding;
+    padding-right: variables.$Mobile-Padding;
     @include tablet{
-        padding-left: 4rem;
+        padding-left: variables.$Tablet-Padding-Text;
+        padding-right: variables.$Tablet-Padding-Text;
     }
     @include desktop{
-        padding: 2.25rem 9.5rem;
+        padding-left: variables.$Desktop-Padding-Text;
+        padding-right: variables.$Desktop-Padding-Text;
     }
     &__title{
         font-size: variables.$Mobile-Section-Header-Text-Size;
         line-height: variables.$Mobile-Section-Header-Line-Height;
         padding-left: variables.$Mobile-Padding;
+        padding-top: variables.$Mobile-Padding;
+        font-weight:700;
         @include tablet{
             font-size: variables.$Tablet-Section-Header-Text-Size;
             line-height: variables.$Tablet-Section-Header-Line-Height;
-            padding-left: variables.$Tablet-Padding;
         }
         @include desktop{
             font-size: variables.$Tablet-Section-Header-Text-Size;
             line-height: variables.$Tablet-Section-Header-Line-Height;
-            padding-left: variables.$Tablet-Padding;
         }
-        font-weight:700;
     }
-    .div__image img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    .div__image{
+        width: 94%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
+    
     @include tablet{
         &__image-container{
             display: flex;
