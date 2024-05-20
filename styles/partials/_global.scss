@@ -48,6 +48,9 @@ nav{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        .active{
+            border-bottom: 2px solid variables.$BandSite-White;
+        }
         li{
             list-style: none;
             padding: variables.$Mobile-Headlines-Padding-Before variables.$Mobile-Padding variables.$Mobile-Padding variables.$Mobile-Padding;
@@ -70,10 +73,15 @@ nav{
                     font-size: variables.$Tablet-Section-Header-Text-Size;
                     line-height: variables.$Tablet-Section-Header-Line-Height;
                 }
+                h3{
+                    font-weight: 700;
+                }
+                 
             }
         }
     }
 }
+
 
 .footer-container{
     background-color: variables.$BandSite-Black;

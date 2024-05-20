@@ -67,6 +67,9 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
 }
+nav ul .active {
+  border-bottom: 2px solid #FFFFFF;
+}
 nav ul li {
   list-style: none;
   padding: 1.5rem 1rem 1rem 1rem;
@@ -98,6 +101,9 @@ nav ul li a {
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
+}
+nav ul li a h3 {
+  font-weight: 700;
 }
 
 .footer-container {
