@@ -74,6 +74,10 @@ nav ul li {
   list-style: none;
   padding: 1.5rem 1rem 1rem 1rem;
 }
+nav ul li:hover {
+  background-color: #E1E1E1;
+  border-bottom: 2px solid #000000;
+}
 nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
@@ -82,6 +86,9 @@ nav ul li a {
 }
 nav ul li a h3 {
   font-weight: 700;
+}
+nav ul li a:hover {
+  color: #000000;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   nav ul li a {
@@ -151,6 +158,11 @@ nav ul li a h3 {
 }
 .footer-container p {
   padding: 1rem 0 1rem 1rem;
+}
+.footer-container p a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: none;
 }
 .footer-container__logo {
   padding: 2rem 0 1rem 1rem;
@@ -472,6 +484,9 @@ nav ul li a h3 {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.photo-gallery .div__image:hover {
+  filter: grayscale(1);
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__image-container {

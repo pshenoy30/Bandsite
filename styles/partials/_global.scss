@@ -54,6 +54,10 @@ nav{
         li{
             list-style: none;
             padding: variables.$Mobile-Headlines-Padding-Before variables.$Mobile-Padding variables.$Mobile-Padding variables.$Mobile-Padding;
+            &:hover{
+                background-color: variables.$BandSite-Mercury;
+                border-bottom: 2px solid variables.$BandSite-DarkBlack;
+            }
             a{
                 color: variables.$BandSite-White;
                 text-decoration: none;
@@ -61,6 +65,9 @@ nav{
                 line-height: variables.$Mobile-Section-Header-Line-Height;
                 h3{
                     font-weight: 700;
+                }
+                &:hover{
+                    color: variables.$BandSite-DarkBlack;
                 }
                 @include tablet{
                     font-size: variables.$Tablet-Section-Header-Text-Size;
@@ -125,6 +132,11 @@ nav{
     }
     p {
         padding: variables.$Mobile-Padding 0 variables.$Mobile-Padding variables.$Mobile-Padding;
+        a{
+            color: variables.$BandSite-White;
+            text-decoration: none;
+            text-transform: none;
+        }
     }
     &__logo{
         padding: 2rem 0 variables.$Mobile-Padding variables.$Mobile-Padding;
