@@ -228,6 +228,10 @@ nav ul li a:hover {
   }
 }
 
+hr {
+  border: 1px solid #E1E1E1;
+}
+
 .div__image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -517,4 +521,65 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
   }
+}
+
+.comments-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+.comments-container__title {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.comments-container__form {
+  padding-left: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.comments-container__form__avatar img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.comments-container__form__inputs {
+  width: 100%;
+  padding-right: 2rem;
+}
+.comments-container__form__inputs label, .comments-container__form__inputs input {
+  display: flex;
+  flex-direction: column;
+}
+.comments-container__form__inputs label {
+  color: #E1E1E1;
+  font-weight: 700;
+}
+.comments-container__form__inputs__input {
+  height: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E1E1E1;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+}
+.comments-container__form__inputs__input--textarea {
+  height: 5rem;
+}
+.comments-container__form__inputs button {
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  background-color: #323232;
+  border: 0;
+  border-radius: 4px;
+  height: 2.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.comments-container__form__inputs button:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=bio.css.map */
