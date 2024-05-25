@@ -24,7 +24,20 @@ const existingComments = [
       comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     },
 ];
-  
+
+    const inputValues = document.getElementById("fullName");
+    inputValues.addEventListener("click",()=>{
+        console.log("clicked on input field");
+        inputValues.value = "";
+    })
+
+    const textValues = document.getElementById("comment");
+    textValues.addEventListener("click",()=>{
+        console.log("clicked on textarea");
+        textValues.value = "";
+    })
+
+
   // Function to create an element with a specified class
   function createElementWithClass(tag, className) {
     const newElement = document.createElement(tag);
@@ -32,6 +45,8 @@ const existingComments = [
     return newElement;
   }
 
+
+  //function to format the date
   function dateFormattor(){
     let current = new Date();
     let year = current.getFullYear();
@@ -66,16 +81,14 @@ const existingComments = [
 
     // Create and append name element
     const nameElement = createElementWithClass("h3","posted-comments__container__inputs__name");
-    nameElement.innerText = commentObj.name;
-    console.log(commentObj.fullName);
+    nameElement.innerText = commentObj.fullName;
     commentContentElement.appendChild(nameElement);
   
     // Create and append comment element
     const commentElement = createElementWithClass("p", "posted-comments__container__inputs__comment");
     commentElement.innerText = commentObj.comment;
     commentContentElement.appendChild(commentElement);
-
-
+    
     // Append the comment content to the comment container
     commentContainerElement.appendChild(commentContentElement);
 
@@ -105,7 +118,6 @@ const existingComments = [
     
     const form = event.target;
     const name = form.fullName.value;
-    console.log(name);
     const comment = form.comment.value;
     const imageURL = form.imgSRC.value;
     const time = dateFormattor();
@@ -115,7 +127,7 @@ const existingComments = [
   
     // Create a new coment object
     const newComment = {
-      name: name,
+      fullName: name,
       comment: comment,
       image: {
         url: imageURL,
@@ -123,7 +135,6 @@ const existingComments = [
       },
       time: time,
     };
-    console.log(newComment);
   
     // Create and append the new comment
     const commentElement = createCommentElement(newComment);

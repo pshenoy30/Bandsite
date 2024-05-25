@@ -83,9 +83,11 @@
             </div>
             <div class="comments__form__inputs">
                 <label for="fullName">NAME</label>
-                <input id="fullName" class="comments__form__inputs__input" type="text" placeholder="Enter your name" required />
+                <input id="fullName" class="comments__form__inputs__input" type="text" value="Enter your name" required />
+                <span id="nameErrorMessage"></span>
                 <label for="comment">COMMENT</label>
-                <textarea id="comment" class="comments__form__inputs__input comments__form__inputs__input--textarea" placeholder="Add your comment" required></textarea>
+                <textarea id="comment" class="comments__form__inputs__input comments__form__inputs__input--textarea" required>Add your comment</textarea>
+                <span id="commentErrorMessage"></span>
                 <button type="submit">COMMENT</button>
             </div>
         </form>

@@ -237,6 +237,18 @@ section {
   padding-right: 1rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  section {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
 
 .div__image {
   -o-object-fit: cover;
@@ -484,7 +496,7 @@ section {
   padding-bottom: 1rem;
 }
 .photo-gallery .div__image {
-  margin: 0.75rem 0 0 0;
+  margin: 0.75rem 0.75rem 0 0;
 }
 .photo-gallery .div__image img {
   width: 100%;
@@ -526,11 +538,6 @@ section {
   }
 }
 
-.comments {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 1rem;
-}
 .comments__title {
   padding-left: 1rem;
   padding-bottom: 1rem;
@@ -538,19 +545,80 @@ section {
   font-size: 1.5rem;
   font-weight: 700;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
 .comments__form {
   padding-left: 1rem;
   display: flex;
   gap: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-left: 6rem;
+  }
+}
+.comments__form__avatar {
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .comments__form__avatar img {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__avatar img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__avatar img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .comments__form__inputs {
   width: 100%;
   padding-right: 2rem;
+}
+@media (min-width: 1280px) {
+  .comments__form__inputs {
+    width: 78%;
+  }
 }
 .comments__form__inputs label, .comments__form__inputs input {
   display: flex;
@@ -558,7 +626,21 @@ section {
 }
 .comments__form__inputs label {
   color: #E1E1E1;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-weight: 700;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__inputs label {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__inputs label {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .comments__form__inputs__input {
   height: 2rem;
@@ -569,11 +651,41 @@ section {
   border-radius: 4px;
   margin: 0.25rem 0;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__inputs__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__inputs__input {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
 .comments__form__inputs__input--textarea {
   height: 5rem;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__inputs__input--textarea {
+    height: 8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__inputs__input--textarea {
+    height: 8rem;
+  }
+}
+.comments__form__inputs__input:active {
+  border-color: #323232;
+}
+.comments__form__inputs__input:invalid {
+  border-color: #D22D2D;
+}
 .comments__form__inputs button {
   text-align: center;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   color: #FFFFFF;
   font-weight: 700;
   background-color: #323232;
@@ -582,6 +694,27 @@ section {
   height: 2.5rem;
   width: 100%;
   margin-bottom: 1rem;
+  height: 5rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__form__inputs button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0 2rem;
+    width: 40%;
+    position: relative;
+    left: 27.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form__inputs button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0 2rem;
+    width: 40%;
+    position: relative;
+    left: 34.4rem;
+  }
 }
 .comments__form__inputs button:hover {
   background-color: #000000;
