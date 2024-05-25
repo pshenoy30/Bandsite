@@ -74,23 +74,25 @@
             </div>
         </div>
     </section>
-    <section class="comments-container">
-        <h3 class="comments-container__title"> Join the Conversation</h3>
-        <form class="comments-container__form">
-            <div class="comments-container__form__avatar">
+    <section class="comments">
+        <h3 class="comments__title"> Join the Conversation</h3>
+        <form class="comments__form">
+            <input id="imgSRC" type="hidden" value="./assets/Images/Mohan-muruge.jpg" />
+            <div class="comments__form__avatar">
                 <img src="./assets/Images/Mohan-muruge.jpg" alt="image of the commentor">
             </div>
-            <div class="comments-container__form__inputs">
-                <label for="name">NAME</label>
-                <input id="name" class="comments-container__form__inputs__input" type="text" placeholder="Enter your name" required />
+            <div class="comments__form__inputs">
+                <label for="fullName">NAME</label>
+                <input id="fullName" class="comments__form__inputs__input" type="text" placeholder="Enter your name" required />
                 <label for="comment">COMMENT</label>
-                <textarea class="comments-container__form__inputs__input comments-container__form__inputs__input--textarea" placeholder="Add your comment" required></textarea>
+                <textarea id="comment" class="comments__form__inputs__input comments__form__inputs__input--textarea" placeholder="Add your comment" required></textarea>
                 <button type="submit">COMMENT</button>
             </div>
         </form>
-        <hr>
+        <hr>   
     </section>
-    
+    <section class="posted-comments">
+    </section>
     <footer class="footer-container">
         <div class="footer-container__get-in-touch-container">
             <h2 class="footer-container__title">Get in Touch</h2>
@@ -138,5 +140,6 @@
         </div>
         <p class="footer-container__copyright">Copyright The Bees Knees &copy; 2023 All Rights Reserved</p>
     </footer>
+    <script src="./scripts/index-page.js"></script>
 </body>
 </html>

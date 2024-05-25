@@ -232,6 +232,12 @@ hr {
   border: 1px solid #E1E1E1;
 }
 
+section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
 .div__image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -267,7 +273,6 @@ hr {
   left: 1rem;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  padding-left: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-section__title {
@@ -285,7 +290,7 @@ hr {
 }
 
 .about-section {
-  padding: 1rem;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .about-section {
@@ -300,7 +305,6 @@ hr {
   }
 }
 .about-section__title {
-  padding-left: 1rem;
   color: #000000;
   font-size: 1.5rem;
   font-weight: 700;
@@ -328,7 +332,6 @@ hr {
 .about-section__quote {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  padding: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .about-section__quote {
@@ -366,7 +369,7 @@ hr {
 .about-section__quote p {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-weight: 600;
   color: #000000;
   text-align: justify;
@@ -387,8 +390,8 @@ hr {
 .about-section__sub-title {
   font-size: 0.875rem;
   line-height: 1.375rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 1rem;
   font-weight: 600;
   color: #000000;
 }
@@ -405,8 +408,8 @@ hr {
   }
 }
 .about-section article {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .about-section article {
@@ -446,8 +449,6 @@ hr {
 
 .photo-gallery {
   background-color: #FAFAFA;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery {
@@ -464,7 +465,6 @@ hr {
 .photo-gallery__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  padding-left: 1rem;
   padding-top: 1rem;
   font-weight: 700;
 }
@@ -480,8 +480,11 @@ hr {
     line-height: 2.75rem;
   }
 }
+.photo-gallery__image-container {
+  padding-bottom: 1rem;
+}
 .photo-gallery .div__image {
-  width: 94%;
+  margin: 0.75rem 0 0 0;
 }
 .photo-gallery .div__image img {
   width: 100%;
@@ -523,41 +526,41 @@ hr {
   }
 }
 
-.comments-container {
+.comments {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1rem;
 }
-.comments-container__title {
+.comments__title {
   padding-left: 1rem;
   padding-bottom: 1rem;
   color: #000000;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.comments-container__form {
+.comments__form {
   padding-left: 1rem;
   display: flex;
   gap: 1rem;
 }
-.comments-container__form__avatar img {
+.comments__form__avatar img {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
 }
-.comments-container__form__inputs {
+.comments__form__inputs {
   width: 100%;
   padding-right: 2rem;
 }
-.comments-container__form__inputs label, .comments-container__form__inputs input {
+.comments__form__inputs label, .comments__form__inputs input {
   display: flex;
   flex-direction: column;
 }
-.comments-container__form__inputs label {
+.comments__form__inputs label {
   color: #E1E1E1;
   font-weight: 700;
 }
-.comments-container__form__inputs__input {
+.comments__form__inputs__input {
   height: 2rem;
   width: 100%;
   box-sizing: border-box;
@@ -566,10 +569,10 @@ hr {
   border-radius: 4px;
   margin: 0.25rem 0;
 }
-.comments-container__form__inputs__input--textarea {
+.comments__form__inputs__input--textarea {
   height: 5rem;
 }
-.comments-container__form__inputs button {
+.comments__form__inputs button {
   text-align: center;
   color: #FFFFFF;
   font-weight: 700;
@@ -580,6 +583,37 @@ hr {
   width: 100%;
   margin-bottom: 1rem;
 }
-.comments-container__form__inputs button:hover {
+.comments__form__inputs button:hover {
   background-color: #000000;
+}
+
+.posted-comments__container {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0 1rem 0;
+}
+.posted-comments__container__avatar {
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.posted-comments__container__avatar img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+.posted-comments__container__inputs {
+  color: #323232;
+}
+.posted-comments__container__inputs__time {
+  color: #E1E1E1;
+  position: absolute;
+  right: 1rem;
+}
+.posted-comments__container__inputs__name {
+  font-weight: 700;
+}
+.posted-comments__container__inputs__comment {
+  text-transform: none;
 }/*# sourceMappingURL=bio.css.map */
