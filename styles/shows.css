@@ -52,8 +52,8 @@ section {
 }
 @media (min-width: 1280px) {
   section {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -73,7 +73,7 @@ h1 {
   h1 {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    padding-left: 10rem;
+    padding-left: 5rem;
   }
 }
 
@@ -95,6 +95,7 @@ h2 {
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-left: 7rem;
+    padding-top: 3rem;
   }
 }
 
@@ -116,6 +117,8 @@ h3 {
   h3 {
     font-size: 1.5rem;
     line-height: 2rem;
+    padding-top: 3rem;
+    margin-left: 12.5rem;
   }
 }
 
@@ -147,13 +150,15 @@ blockquote {
   blockquote {
     font-size: 2.25rem;
     line-height: 2rem;
+    padding: 0 3.25rem;
   }
 }
 @media (min-width: 1280px) {
   blockquote {
     font-size: 1.5rem;
     line-height: 2rem;
-    width: 55%;
+    width: 56%;
+    margin-left: 12.5rem;
   }
 }
 
@@ -215,7 +220,7 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 6rem;
+    padding-left: 5rem;
     width: 93.5%;
   }
 }
@@ -264,6 +269,11 @@ button:hover {
     padding: 1rem 5rem 0 0;
   }
 }
+@media (min-width: 1280px) {
+  .logo {
+    padding: 1rem 5rem 2rem 5rem;
+  }
+}
 
 nav ul {
   display: flex;
@@ -289,13 +299,24 @@ nav ul li:hover {
   background-color: #E1E1E1;
   border-bottom: 2px solid #000000;
 }
+@media (min-width: 1280px) {
+  nav ul li {
+    padding-bottom: 2rem;
+  }
+}
 nav ul li a h3 {
   padding: 0;
   color: #FFFFFF;
+  font-weight: 400;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   nav ul li a h3 {
     padding-bottom: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  nav ul li a h3 {
+    margin-left: 0;
   }
 }
 nav ul li a:hover {
@@ -317,11 +338,18 @@ nav ul li a:hover {
   .footer-container {
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-top: 2rem;
   }
 }
 .footer-container__title {
   color: #FFFFFF;
   text-transform: none;
+}
+@media (min-width: 1280px) {
+  .footer-container__title {
+    padding-left: 0;
+    padding-top: 0;
+  }
 }
 .footer-container__icon-container {
   display: flex;
@@ -395,9 +423,8 @@ nav ul li a:hover {
 }
 @media (min-width: 1280px) {
   .footer-container__logo {
-    padding: 2rem 0 4.25rem 0;
     position: relative;
-    bottom: 20.5rem;
+    bottom: 16.5rem;
     left: 55rem;
   }
 }
@@ -442,11 +469,27 @@ nav ul li a:hover {
     align-items: center;
     gap: 9rem;
   }
+}
+@media (min-width: 1280px) and (min-width: 1280px) {
+  .footer-container__agencies h3 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-container__agencies__email {
+    margin-top: 2rem;
+  }
+  .footer-container__agencies section p a {
+    padding-top: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
   .footer-container__copyright {
     position: relative;
     bottom: 3rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    margin-top: 4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

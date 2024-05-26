@@ -96,6 +96,10 @@ const existingComments = [
   // Function to display the existing comments
   function displayComment(comment) {
     const commentContainer = document.querySelector(".posted-comments");
+    //Create and append hr element
+    const hrElement = document.createElement("hr");
+    commentContainer.appendChild(hrElement);
+    
     for (let i = 0; i < comment.length; i++) {
         const commentItem = comment[i];
         const commentElement = createCommentElement(commentItem);

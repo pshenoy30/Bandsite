@@ -50,7 +50,7 @@ h1{
     @include desktop{
         font-size: variables.$Tablet-Page-Header-Text-Size;
         line-height: variables.$Tablet-Page-Header-Line-Height;
-        padding-left: variables.$Desktop-Padding-Text;
+        padding-left: 5rem;
     }
 }
 
@@ -68,6 +68,7 @@ h2{
         font-size: variables.$Tablet-Section-Header-Text-Size;
         line-height: variables.$Tablet-Section-Header-Line-Height;
         padding-left: 7rem;
+        padding-top: 3rem;
     }
 }
 
@@ -85,6 +86,8 @@ h3{
     @include desktop{
         font-size: variables.$Tablet-Subheader-Text-Size;
         line-height: variables.$Tablet-Subheader-Line-Height;
+        padding-top: 3rem;
+        margin-left: 12.5rem;
     }
 }
 a{
@@ -107,15 +110,16 @@ a{
 blockquote{
     font-size: variables.$Mobile-Subheader-Text-Size;
     line-height: variables.$Mobile-Subheader-Line-Height;
-
     @include tablet{
         font-size: variables.$Tablet-Section-Header-Text-Size;
         line-height: variables.$Tablet-Subheader-Line-Height;
+        padding: 0 3.25rem;
     }
     @include desktop{
         font-size: variables.$Tablet-Subheader-Text-Size;
         line-height: variables.$Tablet-Subheader-Line-Height;
-        width: 55%;
+        width: 56%;
+        margin-left: 12.5rem;
     }
 }
 
@@ -207,6 +211,9 @@ button{
     @include tablet{
         padding: 1rem 5rem 0 0;
     }
+    @include desktop{
+        padding: 1rem 5rem 2rem 5rem;
+    }
 }
 
 nav{
@@ -230,12 +237,19 @@ nav{
                 background-color: variables.$BandSite-Mercury;
                 border-bottom: 2px solid variables.$BandSite-DarkBlack;
             }
+            @include desktop{
+                padding-bottom:2rem;
+            }
             a{
                 h3{
                     padding:0;
                     color: variables.$BandSite-White;
+                    font-weight: 400;
                     @include tablet{
                         padding-bottom: 1rem;
+                    }
+                    @include desktop{
+                        margin-left: 0;
                     }
                 }
                 &:hover{
@@ -257,10 +271,15 @@ nav{
     @include desktop{
         padding-left: variables.$Desktop-Padding-Text;
         padding-right: variables.$Desktop-Padding-Text;
+        padding-top: 2rem;
     }
     &__title{
         color: variables.$BandSite-White;
         text-transform: none;
+        @include desktop{
+            padding-left: 0;
+            padding-top: 0;
+        }
     }
     &__icon-container{
         display: flex;
@@ -295,7 +314,7 @@ nav{
             @include tablet{
                 font-size: variables.$Tablet-Footer-Copy-Text-Size;
                 line-height: variables.$Tablet-Footer-Copy-Line-Height;
-            } 
+            }
         }
         a{
             text-transform: none;
@@ -323,9 +342,8 @@ nav{
             left: 40rem; 
         }
         @include desktop{
-            padding: 2rem 0 variables.$Tablet-Padding 0; 
             position: relative;
-            bottom: 20.5rem;
+            bottom: 16.5rem;
             left: 55rem;  
         }
         text-align: left;
@@ -368,12 +386,30 @@ nav{
             justify-content: left;
             align-items: center;
             gap: 9rem;
+            h3{
+                @include desktop{
+                    margin-left: 0;
+                }
+            }
+            &__email{
+                margin-top: 2rem;
+            }
+            section{
+                p{
+                    a{
+                        padding-top:2rem;
+                        font-size: variables.$Tablet-Footer-Copy-Text-Size;
+                        line-height: variables.$Tablet-Footer-Copy-Line-Height;
+                    }
+                }
+            }
         }
         &__copyright{
             position: relative;
             bottom: 3rem;
-            font-size: variables.$Tablet-Subheader-Text-Size;
-            line-height: variables.$Tablet-Subheader-Line-Height;
+            margin-top: 4rem;
+            font-size: variables.$Tablet-Footer-Copy-Text-Size;
+            line-height: variables.$Tablet-Footer-Copy-Line-Height;
         }
     }
 }
