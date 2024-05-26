@@ -3,24 +3,6 @@
 @use './partials/typography';
 @use './partials/variables';
 
-hr{
-    border: 1px solid variables.$BandSite-Mercury;
-}
-
-section{
-    padding-left: variables.$Mobile-Padding;
-    padding-right: variables.$Mobile-Padding;
-    margin-bottom: 1rem;
-    @include tablet{
-        padding-left: variables.$Tablet-Padding;
-        padding-right: variables.$Tablet-Padding;
-    }
-    @include desktop{
-        padding-left: variables.$Desktop-Padding;
-        padding-right: variables.$Desktop-Padding;
-    }
-}
-
 .div__image{
     object-fit: cover;
     object-position: center;
@@ -42,50 +24,13 @@ section{
         height: 70vh;
     }
     &__title{
-        color: variables.$BandSite-White;
-        font-weight: 700;
         position: relative;
         top:50%;
         left: 1rem;
-        font-size: variables.$Mobile-Page-Header-Text-Size;
-        line-height: variables.$Mobile-Page-Header-Text-Size;
-        @include tablet{
-            font-size: variables.$Tablet-Page-Header-Text-Size;
-            line-height: variables.$Tablet-Page-Header-Line-Height;
-            padding-left: variables.$Tablet-Padding-Text;
-        }
-        @include desktop{
-            font-size: variables.$Tablet-Page-Header-Text-Size;
-            line-height: variables.$Tablet-Page-Header-Line-Height;
-            padding-left: variables.$Desktop-Padding-Text;
-        }
     }
 }
 
 .about-section{
-    padding-top: variables.$Mobile-Padding;
-    @include tablet{
-        padding-left: variables.$Tablet-Padding-Text;
-        padding-right: variables.$Tablet-Padding-Text;
-    }
-    @include desktop{
-        padding-left: variables.$Desktop-Padding-Text;
-        padding-right: variables.$Desktop-Padding-Text;
-    }
-    &__title{
-        color: variables.$BandSite-DarkBlack;
-        font-size: variables.$Mobile-Section-Header-Text-Size;
-        font-weight: 700;
-        @include tablet{
-            font-size: variables.$Tablet-Section-Header-Text-Size;
-            line-height: variables.$Tablet-Section-Header-Line-Height;
-        }
-        @include desktop{
-            font-size: variables.$Tablet-Section-Header-Text-Size;
-            line-height: variables.$Tablet-Section-Header-Line-Height;
-            padding-left: 7rem;
-        }
-    }
     .div__image{
         width: 94%;
         img{
@@ -94,89 +39,13 @@ section{
         }
     }
     &__quote{
-        font-size: variables.$Mobile-Subheader-Text-Size;
-        line-height: variables.$Mobile-Subheader-Line-Height;
-
-        @include tablet{
-            font-size: variables.$Tablet-Section-Header-Text-Size;
-            line-height: variables.$Tablet-Subheader-Line-Height;
-        }
-        @include desktop{
-            font-size: variables.$Tablet-Subheader-Text-Size;
-            line-height: variables.$Tablet-Subheader-Line-Height;
-            width: 55%;
-        }
-        q{
-            font-size: variables.$Mobile-Subheader-Text-Size;
-            line-height: variables.$Mobile-Subheader-Line-Height;
-            font-weight: 700;
-            color: variables.$BandSite-DarkBlack;
-            text-align: justify;
-            text-transform: none;
-            @include tablet{
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
-            @include desktop{
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
-        }
         p{
-            font-size: variables.$Mobile-Subheader-Text-Size;
-            line-height: variables.$Mobile-Subheader-Line-Height;
-            padding-top: 0.5rem;
             font-weight: 600;
-            color: variables.$BandSite-DarkBlack;
-            text-align: justify;
-            text-transform: none;
-            @include tablet{
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
-            @include desktop{
-                font-size: variables.$Tablet-Subheader-Text-Size;
-                line-height: variables.$Tablet-Subheader-Line-Height;
-            }
         }
     }
-    &__sub-title{
-        font-size: variables.$Mobile-Subheader-Text-Size;
-        line-height: variables.$Mobile-Subheader-Line-Height;
-        padding-top: variables.$Mobile-Padding;
-        padding-bottom: variables.$Mobile-Padding;
-        font-weight: 600;
-        color: variables.$BandSite-DarkBlack;
-        @include tablet{
-            font-size: variables.$Tablet-Subheader-Text-Size;
-            line-height: variables.$Tablet-Subheader-Line-Height;
-        }
-        @include desktop{
-            font-size: variables.$Tablet-Subheader-Text-Size;
-            line-height: variables.$Tablet-Subheader-Line-Height;
-        }
-    }
+    
     article{
-        font-size: variables.$Mobile-Body-Copy-Text-Size;
-        line-height: variables.$Mobile-Body-Copy-Line-Height;
-        @include tablet{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 48rem;
-        }
-        @include desktop{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 65rem;
-        }
         p{
-            color: variables.$BandSite-DarkBlack;
-            padding-bottom: variables.$Mobile-Padding;
-            text-transform: none;
-            font-size: variables.$Mobile-Body-Copy-Text-Size;
-            line-height: variables.$Mobile-Body-Copy-Line-Height;
             @include tablet{
                 width: 48%;
                 padding-right: 5.25rem;
@@ -263,22 +132,6 @@ section{
 }
 
 .comments{
-    &__title{
-        padding-left:variables.$Mobile-Padding;
-        padding-bottom: 1rem;
-        color: variables.$BandSite-DarkBlack;
-        font-size: variables.$Mobile-Section-Header-Text-Size;
-        font-weight: 700;
-        @include tablet{
-            font-size: variables.$Tablet-Section-Header-Text-Size;
-            line-height: variables.$Tablet-Section-Header-Line-Height;
-        }
-        @include desktop{
-            font-size: variables.$Tablet-Section-Header-Text-Size;
-            line-height: variables.$Tablet-Section-Header-Line-Height;
-        }
-
-    }
     &__form{
         padding-left:variables.$Mobile-Padding;
         display: flex;
@@ -392,7 +245,6 @@ section{
                 height: 2.5rem;
                 width: 100%;
                 margin-bottom: 1rem;
-                height: 5rem;
                 @include tablet{
                     font-size: variables.$Tablet-Subheader-Text-Size;
                     line-height: variables.$Tablet-Subheader-Line-Height;
@@ -438,11 +290,13 @@ section{
             color: variables.$BandSite-Black;
             &__time{
                 color: variables.$BandSite-Mercury;
+                padding:0;
                 position: absolute;
                 right: 1rem;
             }
             &__name{
                 font-weight: 700;
+                padding:0;
             }
             &__comment{
                 text-transform: none;
