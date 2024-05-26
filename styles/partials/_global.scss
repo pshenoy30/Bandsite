@@ -197,8 +197,6 @@ button{
         line-height: variables.$Tablet-Subheader-Line-Height;
         padding: 0 2rem;
         width: 40%;
-        position: relative;
-        left: 34.4rem;
     }
     &:hover{
         background-color: variables.$BandSite-DarkBlack;
@@ -245,11 +243,17 @@ nav{
                     padding:0;
                     color: variables.$BandSite-White;
                     font-weight: 400;
+                    font-size: variables.$Mobile-Body-Copy-Text-Size;
+                    line-height: variables.$Mobile-Body-Copy-Line-Height;
                     @include tablet{
                         padding-bottom: 1rem;
+                        font-size: variables.$Tablet-Body-Copy-Text-Size;
+                        line-height: variables.$Tablet-Body-Copy-Line-Height;
                     }
                     @include desktop{
                         margin-left: 0;
+                        font-size: variables.$Tablet-Body-Copy-Text-Size;
+                        line-height: variables.$Tablet-Body-Copy-Line-Height;           
                     }
                 }
                 &:hover{
@@ -344,7 +348,10 @@ nav{
         @include desktop{
             position: relative;
             bottom: 16.5rem;
-            left: 55rem;  
+            left: 55rem; 
+            &--shows{
+                bottom: 14.5rem;
+            } 
         }
         text-align: left;
     }

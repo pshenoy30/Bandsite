@@ -252,8 +252,6 @@ button {
     line-height: 2rem;
     padding: 0 2rem;
     width: 40%;
-    position: relative;
-    left: 34.4rem;
   }
 }
 button:hover {
@@ -308,15 +306,21 @@ nav ul li a h3 {
   padding: 0;
   color: #FFFFFF;
   font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   nav ul li a h3 {
     padding-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 @media (min-width: 1280px) {
   nav ul li a h3 {
     margin-left: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 nav ul li a:hover {
@@ -426,6 +430,9 @@ nav ul li a:hover {
     position: relative;
     bottom: 16.5rem;
     left: 55rem;
+  }
+  .footer-container__logo--shows {
+    bottom: 14.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {

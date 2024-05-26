@@ -31,6 +31,11 @@ td{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    @include desktop{
+        flex-direction: row;
+        align-items: center;
+        gap: 13rem;
+    }
     &--shows-background{
         background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
     }
@@ -43,6 +48,9 @@ td{
             @include tablet{
                 margin-top: 4rem;
             }
+            @include desktop{
+                margin-left: 5rem;
+            }
         }
         h1{
             margin-bottom: 1rem;
@@ -51,11 +59,24 @@ td{
             @include tablet{
                 width: 34rem;
             }
+            @include desktop{
+                width: 31rem;
+            }
+        }
+    }
+    &__left{
+        @include desktop{
+            margin-top: 5rem;
         }
     }
 }
 
 .shows-section{
+    @include desktop{
+        display: flex;
+        gap: 10rem;
+        align-items: baseline;
+    }
     &__content{
         &__title{
             color: variables.$BandSite-Mercury;
@@ -70,23 +91,21 @@ td{
             }
         }
     }
-    @include tablet{
-        &__table{
-            &__row{
-                &__text{
-                    &--bold{
-                        font-weight: 600;
-                    }
+    &__table{
+        &__row{
+            &__text{
+                &--bold{
+                    font-weight: 600;
                 }
-                &--border-bottom{
-                    border-bottom: 1px solid variables.$BandSite-Mercury;
-                }
-                &__button{
-                    width: 67%;
-                    margin-top: 1rem;
-                    font-size: variables.$Tablet-Body-Copy-Text-Size;
-                    line-height: variables.$Tablet-Body-Copy-Line-Height;
-                }
+            }
+            &--border-bottom{
+                border-bottom: 1px solid variables.$BandSite-Mercury;
+            }
+            &__button{
+                width: 67%;
+                margin-top: 1rem;
+                font-size: variables.$Tablet-Body-Copy-Text-Size;
+                line-height: variables.$Tablet-Body-Copy-Line-Height;
             }
         }
     }
