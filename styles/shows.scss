@@ -17,6 +17,12 @@ table{
     margin-top: 2rem;
     width: 49rem;
 }
+tr{
+    padding: 1.5rem 1.125rem;
+    &:hover{
+       background-color: variables.$BandSite-Alabaster;
+    }
+}
 th{
     color: variables.$BandSite-Mercury;
     font-weight: 700;
@@ -27,6 +33,11 @@ td{
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.selected{
+    background-color: variables.$BandSite-Mercury;
+}
+
 .hero-section{
     display: flex;
     flex-direction: column;

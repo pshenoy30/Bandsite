@@ -517,6 +517,13 @@ table {
   width: 49rem;
 }
 
+tr {
+  padding: 1.5rem 1.125rem;
+}
+tr:hover {
+  background-color: #FAFAFA;
+}
+
 th {
   color: #E1E1E1;
   font-weight: 700;
@@ -527,6 +534,10 @@ td {
   font-weight: 400;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.selected {
+  background-color: #E1E1E1;
 }
 
 .hero-section {

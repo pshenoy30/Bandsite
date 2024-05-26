@@ -153,3 +153,13 @@ function displayShows(shows) {
   }
 
   displayShows(showsContent);
+
+  const tableElement = document.querySelector(".shows-section__table");
+  tableElement.addEventListener("click", (event)=>{ 
+    const rows = document.querySelector(".selected");
+    if(rows !== null){
+      rows.classList.remove("selected");
+    }
+    const row = event.target.closest("tr");
+    row.classList.add("selected");
+  });
