@@ -3,14 +3,92 @@
 @use './partials/typography';
 @use './partials/variables';
 
+iframe{
+    width: 100%;
+    height: 9rem;
+    @include tablet{
+        margin-top: 2rem;
+        width: 61%;
+    }
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 2rem;
+    width: 49rem;
+}
+th{
+    color: variables.$BandSite-Mercury;
+    font-weight: 700;
+    text-align: left;
+}
+td{
+    font-weight: 400;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .hero-section{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    &--shows-background{
+        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
+    }
     &__right{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        h3{
+            font-weight: 400;
+            color: variables.$BandSite-White;
+            @include tablet{
+                margin-top: 4rem;
+            }
+        }
+        h1{
+            margin-bottom: 1rem;
+            width: 14rem;
+            text-transform: none;
+            @include tablet{
+                width: 34rem;
+            }
+        }
     }
 }
+
+.shows-section{
+    &__content{
+        &__title{
+            color: variables.$BandSite-Mercury;
+            padding-bottom: 0;
+        }
+        &__text{
+            font-weight: 400;
+            padding-top: 0;
+            padding-bottom: 0;
+            &--bold{
+                font-weight: 600;
+            }
+        }
+    }
+    @include tablet{
+        &__table{
+            &__row{
+                &__text{
+                    &--bold{
+                        font-weight: 600;
+                    }
+                }
+                &--border-bottom{
+                    border-bottom: 1px solid variables.$BandSite-Mercury;
+                }
+                &__button{
+                    width: 67%;
+                    margin-top: 1rem;
+                    font-size: variables.$Tablet-Body-Copy-Text-Size;
+                    line-height: variables.$Tablet-Body-Copy-Line-Height;
+                }
+            }
+        }
+    }
+}
+

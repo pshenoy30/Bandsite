@@ -19,7 +19,7 @@
         </nav>
     </header>
     <main>
-        <section class="hero-section">
+        <section class="hero-section hero-section--bio-background">
             <h1 class="hero-section__title">The bees knees</h1>
         </section>
         <section class="about-section">
@@ -43,7 +43,7 @@
         </section>
     </main>
     <section class="photo-gallery">
-        <h3 class="photo-gallery__title">Photo gallery</h3>
+        <h2 class="photo-gallery__title">Photo gallery</h3>
         <div class="photo-gallery__image-container">
             <div class="div__image">
                 <img src="./assets/Images/Photo-gallery-1.jpg" alt="concert from an audience point of view" />
@@ -84,10 +84,8 @@
             <div class="comments__form__inputs">
                 <label for="fullName">NAME</label>
                 <input id="fullName" class="comments__form__inputs__input" type="text" value="Enter your name" required />
-                <span id="nameErrorMessage"></span>
                 <label for="comment">COMMENT</label>
                 <textarea id="comment" class="comments__form__inputs__input comments__form__inputs__input--textarea" required>Add your comment</textarea>
-                <span id="commentErrorMessage"></span>
                 <button type="submit">COMMENT</button>
             </div>
         </form>
