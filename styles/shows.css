@@ -537,7 +537,7 @@ td {
 }
 
 .selected {
-  background-color: #E1E1E1;
+  background-color: #E1E1E1 !important;
 }
 
 .hero-section {
@@ -601,17 +601,20 @@ td {
     align-items: baseline;
   }
 }
-.shows-section__content__title {
+.shows-section__container__content__title {
   color: #E1E1E1;
   padding-bottom: 0;
 }
-.shows-section__content__text {
+.shows-section__container__content__text {
   font-weight: 400;
   padding-top: 0;
   padding-bottom: 0;
 }
-.shows-section__content__text--bold {
+.shows-section__container__content__text--bold {
   font-weight: 600;
+}
+.shows-section__container__content button {
+  margin-top: 1rem;
 }
 .shows-section__table__row__text--bold {
   font-weight: 600;

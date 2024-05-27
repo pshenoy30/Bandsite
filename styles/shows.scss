@@ -35,7 +35,7 @@ td{
 }
 
 .selected{
-    background-color: variables.$BandSite-Mercury;
+    background-color: variables.$BandSite-Mercury !important;
 }
 
 .hero-section{
@@ -88,17 +88,22 @@ td{
         gap: 10rem;
         align-items: baseline;
     }
-    &__content{
-        &__title{
-            color: variables.$BandSite-Mercury;
-            padding-bottom: 0;
-        }
-        &__text{
-            font-weight: 400;
-            padding-top: 0;
-            padding-bottom: 0;
-            &--bold{
-                font-weight: 600;
+    &__container{
+        &__content{
+            &__title{
+                color: variables.$BandSite-Mercury;
+                padding-bottom: 0;
+            }
+            &__text{
+                font-weight: 400;
+                padding-top: 0;
+                padding-bottom: 0;
+                &--bold{
+                    font-weight: 600;
+                }
+            }
+            button{
+                margin-top: 1rem;
             }
         }
     }
