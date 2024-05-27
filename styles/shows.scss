@@ -1,0 +1,129 @@
+@use './partials/global';
+@use './partials/mixins' as *;
+@use './partials/typography';
+@use './partials/variables';
+
+iframe{
+    width: 100%;
+    height: 9rem;
+    @include tablet{
+        margin-top: 2rem;
+        width: 61%;
+    }
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 2rem;
+    width: 49rem;
+}
+tr{
+    padding: 1.5rem 1.125rem;
+    &:hover{
+       background-color: variables.$BandSite-Alabaster;
+    }
+}
+th{
+    color: variables.$BandSite-Mercury;
+    font-weight: 700;
+    text-align: left;
+}
+td{
+    font-weight: 400;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.selected{
+    background-color: variables.$BandSite-Mercury !important;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    @include desktop{
+        flex-direction: row;
+        align-items: center;
+        gap: 13rem;
+    }
+    &--shows-background{
+        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-weight: 400;
+            color: variables.$BandSite-White;
+            @include tablet{
+                margin-top: 4rem;
+            }
+            @include desktop{
+                margin-left: 5rem;
+            }
+        }
+        h1{
+            margin-bottom: 1rem;
+            width: 14rem;
+            text-transform: none;
+            @include tablet{
+                width: 34rem;
+            }
+            @include desktop{
+                width: 31rem;
+            }
+        }
+    }
+    &__left{
+        @include desktop{
+            margin-top: 5rem;
+        }
+    }
+}
+
+.shows-section{
+    @include desktop{
+        display: flex;
+        gap: 10rem;
+        align-items: baseline;
+    }
+    &__container{
+        &__content{
+            &__title{
+                color: variables.$BandSite-Mercury;
+                padding-bottom: 0;
+            }
+            &__text{
+                font-weight: 400;
+                padding-top: 0;
+                padding-bottom: 0;
+                &--bold{
+                    font-weight: 600;
+                }
+            }
+            button{
+                margin-top: 1rem;
+            }
+        }
+    }
+    &__table{
+        &__row{
+            &__text{
+                &--bold{
+                    font-weight: 600;
+                }
+            }
+            &--border-bottom{
+                border-bottom: 1px solid variables.$BandSite-Mercury;
+            }
+            &__button{
+                width: 67%;
+                margin-top: 1rem;
+                font-size: variables.$Tablet-Body-Copy-Text-Size;
+                line-height: variables.$Tablet-Body-Copy-Line-Height;
+            }
+        }
+    }
+}
+
