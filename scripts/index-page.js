@@ -28,8 +28,8 @@
   }
 
   //function to format the date
-  function dateFormattor(){
-    let current = new Date();
+  function dateFormattor(timestamp){
+    let current = new Date(timestamp)
     let year = current.getFullYear();
     let month = String(current.getMonth()+1).padStart(2,"0");
     let day = String(current.getDate()).padStart(2,"0");
@@ -53,7 +53,9 @@
   
     // Create and append time element
     const dateElement = createElementWithClass("h3","posted-comments__container__inputs__time");
-    dateElement.innerText = commentObj.timestamp;
+    const dateElementContent = dateFormattor(commentObj.timestamp);
+    console.log(dateElementContent);
+    dateElement.innerText = dateElementContent;
     commentContentElement.appendChild(dateElement);
 
     // Create and append name element
@@ -120,7 +122,6 @@
   }
   
   console.log(await bandApi.getComments());
-
 
   // Add event listener to the form for submitting a new comment
   const newCommentForm = document.querySelector(".comments__form");
