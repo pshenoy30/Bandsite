@@ -1,29 +1,33 @@
-const showsContent = [
-    { date: "Mon Sept 09 2024", 
-      venue:"Ronald Lane",
-      location: "San Francisco, CA",
-    },
-    { date: "Tue Sept 17 2024", 
-      venue:"Pier 3 East",
-      location: "San Francisco, CA"
-    },
-    { date: "Sat Oct 12 2024", 
-      venue:"View Lounge",
-      location: "San Francisco, CA",
-    },
-    { date: "Sat Nov 16 2024", 
-      venue:"Hyatt Agency",
-      location: "San Francisco, CA",
-    },
-    { date: "Fri Nov 29 2024", 
-      venue:"Moscow Center",
-      location: "San Francisco, CA",
-    },
-    { date: "Wed Dec 18 2024", 
-      venue:"Press Club",
-      location: "San Francisco, CA",
-    }
-];
+// const showsContent = [
+//     { date: "Mon Sept 09 2024", 
+//       venue:"Ronald Lane",
+//       location: "San Francisco, CA",
+//     },
+//     { date: "Tue Sept 17 2024", 
+//       venue:"Pier 3 East",
+//       location: "San Francisco, CA"
+//     },
+//     { date: "Sat Oct 12 2024", 
+//       venue:"View Lounge",
+//       location: "San Francisco, CA",
+//     },
+//     { date: "Sat Nov 16 2024", 
+//       venue:"Hyatt Agency",
+//       location: "San Francisco, CA",
+//     },
+//     { date: "Fri Nov 29 2024", 
+//       venue:"Moscow Center",
+//       location: "San Francisco, CA",
+//     },
+//     { date: "Wed Dec 18 2024", 
+//       venue:"Press Club",
+//       location: "San Francisco, CA",
+//     }
+// ];
+import BandSiteApi from "./band-site-api.js";
+import BAND_API_KEY from "./band-site-api.js";
+
+const bandApi = new BandSiteApi(BAND_API_KEY);
 
 const showContentArray = ["DATE","VENUE","LOCATION"];
 
@@ -62,7 +66,7 @@ function showsElementMobile(showsObj,titleObj) {
 
     // Create and append venue element
     const venueElementContent = createElementWithClass("h3","shows-section__container__content__text");
-    venueElementContent.innerText = showsObj.venue;
+    venueElementContent.innerText = showsObj.place;
     showsContainerElement.appendChild(venueElementContent);
 
     // Create and append location title
@@ -111,7 +115,7 @@ function showsElementTabletDesktop(showsObj,titleObj) {
 
     // Create and append venue element
     const venueElementContent = createElementWithClass("td","shows-section__table__row__text");
-    venueElementContent.innerText = item.venue;
+    venueElementContent.innerText = item.place;
     showsElementContentRow.appendChild(venueElementContent);
 
     // Create and append location element
@@ -152,7 +156,9 @@ function displayShows(shows) {
     }
   }
 
-  displayShows(showsContent);
+  console.log(await bandApi.getShows())
+
+  displayShows(await bandApi.getShows());
 
   const tableElement = document.querySelector(".shows-section__table");
   tableElement.addEventListener("click", (event)=>{ 
