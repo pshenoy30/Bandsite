@@ -13,47 +13,16 @@ class BandSiteApi {
 
     async getComments(){
         const bandApiResponse = await axios.get(`${this.baseUrl}comments?api_key=${this.apiKey}`);
-        bandApiResponse.data.sort(function(a,b){return a.timestamp - b.timestamp});
-        return bandApiResponse.data;
+        const sortedBandApiResponse = bandApiResponse.data.sort(function(a,b){return b.timestamp - a.timestamp});
+        //displayComment(sortedbandApiResponse);
+        return sortedBandApiResponse;
     }
 
     async getShows(){
-        const bandApiResponse = await axios.get(`${this.baseUrl}showdates?api_key=${ this.apiKey}`);
+        const bandApiResponse = await axios.get(`${this.baseUrl}showdates?api_key=${this.apiKey}`);
         return bandApiResponse.data;
     }
 }
 
-const bandApi = new BandSiteApi(BAND_API_KEY);
-
-const getBandComment = async () => {
-    try {
-        const comments = await bandApi.getComments();
-        return comments;
-    } catch (error) {
-        console.log("Couldn't fetch the band data", error);
-    }
-}
-
-const postBandComment = async (comment) => {
-    try {
-        const comments = await bandApi.postComment(comment);
-        return comments;
-    } catch (error) {
-        console.log("Couldn't fetch the band data", error);
-    }
-}
-
-const getBandShowdates = async (comment) => {
-    try {
-        const showDates = await bandApi.getShows();
-        return showDates;
-    } catch (error) {
-        console.log("Couldn't fetch the band data", error);
-    }
-}
-
-// console.log(getBandComment());
-// console.log(postBandComment({name:"nigel",comment:"You are the best"}));
-// console.log(getBandShowdates());
-//export default BAND_API_KEY;
-//export {BandSiteApi,bandApi};
+export default BandSiteApi;
+export {BAND_API_KEY}; 
