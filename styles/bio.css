@@ -884,6 +884,8 @@ nav ul li a:hover {
 }
 .posted-comments__container__inputs__buttons__button button {
   margin: 0;
+  width: 5rem;
+  padding: 0 0.35rem;
 }
 @media (min-width: 768px) {
   .posted-comments__container__inputs__buttons__button button {
@@ -897,6 +899,8 @@ nav ul li a:hover {
 }
 .posted-comments__container__inputs__buttons__button__like-text {
   font-weight: 400;
+  padding-top: 0.25rem;
+  padding-bottom: 0;
 }
 @media (min-width: 1280px) {
   .posted-comments__container__inputs__buttons__button__like-text {
