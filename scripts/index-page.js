@@ -82,34 +82,34 @@ const existingComments = [
     let secInterval = Math.floor(diff/(1));
 
     //if the date is years ago, then print the date
-    if (yearInterval > 1){
+    if (yearInterval >= 1){
       let year = datePosted.getFullYear();
       let month = String(datePosted.getMonth()+1).padStart(2,"0");
       let day = String(datePosted.getDate()).padStart(2,"0");
       return (month+"/"+day+"/"+year)
     }
 
-    if (monthInterval > 1){
+    if (monthInterval >= 1 && monthInterval < 12){
       return monthInterval+" "+"months ago";
     }
 
-    if (weekInterval > 1){
+    if (weekInterval >= 1 && weekInterval < 5){
       return weekInterval+" "+"weeks ago";
     }
 
-    if (dayInterval > 1){
+    if (dayInterval >= 1 && dayInterval < 7){
       return dayInterval+" "+"days ago";
     }
 
-    if (hourInterval > 1){
+    if (hourInterval >= 1 && hourInterval < 24){
       return hourInterval+" "+"hours ago";
     }
 
-    if (minuteInterval > 1){
+    if (minuteInterval >= 1 && minuteInterval < 60){
       return minuteInterval+" "+"mins ago";
     }
 
-    if (secInterval >= 0){
+    if (secInterval >= 0 && secInterval < 60){
       return secInterval+" "+"secs ago";
     }
   }
