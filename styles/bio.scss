@@ -1,7 +1,11 @@
 @use './partials/global';
 @use './partials/mixins' as *;
 @use './partials/typography';
+<<<<<<< HEAD
 @use './partials/variables' as *;
+=======
+@use './partials/variables';
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
 
 .div__image{
     object-fit: cover;
@@ -12,7 +16,11 @@
 
 .hero-section{
     &--bio-background{
+<<<<<<< HEAD
         background-image: linear-gradient($BandSite-Overlay,$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
+=======
+        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     }
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +97,11 @@
 }
 
 .photo-gallery{
+<<<<<<< HEAD
     background-color: $BandSite-Alabaster;
+=======
+    background-color: variables.$BandSite-Alabaster;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     &__image-container{
         padding-bottom: 1rem;
     }
@@ -141,19 +153,31 @@
 
 .comments{
     &__form{
+<<<<<<< HEAD
         padding-left:$Mobile-Padding;
+=======
+        padding-left:variables.$Mobile-Padding;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
         display: flex;
         gap: 1rem;
         margin-top: 2rem;
         @include tablet{
+<<<<<<< HEAD
             padding-left: $Tablet-Padding;
+=======
+            padding-left: variables.$Tablet-Padding;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
         }
         @include desktop{
             margin-left: 28%;
         }
 
         &__avatar{
+<<<<<<< HEAD
             background-color: $BandSite-Mercury;
+=======
+            background-color: variables.$BandSite-Mercury;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
             border-radius: 50%;
             width: 2rem;
             height: 2rem;
@@ -191,6 +215,7 @@
                 flex-direction: column;
             }
             label{
+<<<<<<< HEAD
                 color: $BandSite-Mercury;
                 font-size: $Mobile-Body-Copy-Text-Size;
                 line-height: $Mobile-Body-Copy-Line-Height;
@@ -202,6 +227,19 @@
                 @include desktop{
                     font-size: $Tablet-Body-Copy-Text-Size;
                     line-height: $Tablet-Body-Copy-Line-Height;
+=======
+                color: variables.$BandSite-Mercury;
+                font-size: variables.$Mobile-Body-Copy-Text-Size;
+                line-height: variables.$Mobile-Body-Copy-Line-Height;
+                font-weight: 700;
+                @include tablet{
+                    font-size: variables.$Tablet-Body-Copy-Text-Size;
+                    line-height: variables.$Tablet-Body-Copy-Line-Height;
+                }
+                @include desktop{
+                    font-size: variables.$Tablet-Body-Copy-Text-Size;
+                    line-height: variables.$Tablet-Body-Copy-Line-Height;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
                 }
             }
             button{
@@ -220,7 +258,11 @@
                 height: 2rem;
                 width: 100%;
                 box-sizing: border-box;
+<<<<<<< HEAD
                 border: 1px solid $BandSite-Mercury;
+=======
+                border: 1px solid variables.$BandSite-Mercury;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
                 padding: 0.75rem;
                 border-radius: 4px;
                 margin: 0.25rem 0;
@@ -234,7 +276,10 @@
                 }
                 &--textarea{
                     height: 5rem;
+<<<<<<< HEAD
                     text-transform: none;
+=======
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
                     @include tablet{
                         height: 8rem;
                         margin-bottom: 1.5rem;
@@ -244,12 +289,17 @@
                         height: 8rem;
                     }
                 }
+<<<<<<< HEAD
                 &::placeholder{
                     color: $BandSite-Black;
                     
                 }
                 &:active{
                     border-color: $BandSite-Black;
+=======
+                &:active{
+                    border-color: variables.$BandSite-Black;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
                 }
                 &:invalid{
                     border-color: #D22D2D;
@@ -272,7 +322,11 @@
             padding: 0;
         }
         &__avatar{
+<<<<<<< HEAD
             background-color: $BandSite-Mercury;
+=======
+            background-color: variables.$BandSite-Mercury;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
             border-radius: 50%;
             width: 2rem;
             height: 2rem;
@@ -299,9 +353,15 @@
             }
         }
         &__inputs{
+<<<<<<< HEAD
             color: $BandSite-Black;
             &__time{
                 color: $BandSite-Mercury;
+=======
+            color: variables.$BandSite-Black;
+            &__time{
+                color: variables.$BandSite-Mercury;
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
                 padding:0;
                 position: absolute;
                 right: 1rem;
@@ -322,6 +382,7 @@
             &__comment{
                 text-transform: none;
             }
+<<<<<<< HEAD
             &__buttons{
                 display: flex;
                 gap: 2rem;
@@ -349,6 +410,8 @@
                 
             }
 
+=======
+>>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
         }
     }
 
