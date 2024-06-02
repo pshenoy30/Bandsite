@@ -765,6 +765,7 @@ nav ul li a:hover {
 }
 .comments__form__inputs__input--textarea {
   height: 5rem;
+  text-transform: none;
 }
 @media (min-width: 768px) {
   .comments__form__inputs__input--textarea {

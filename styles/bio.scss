@@ -234,6 +234,7 @@
                 }
                 &--textarea{
                     height: 5rem;
+                    text-transform: none;
                     @include tablet{
                         height: 8rem;
                         margin-bottom: 1.5rem;

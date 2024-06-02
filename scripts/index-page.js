@@ -187,8 +187,6 @@
     const buttonText = event.target.closest("button").innerText;
 
     if (buttonText === "DELETE"){
-      console.log("in the delete section");
-      console.log(commentId);
       const allComments = await bandApi.getComments();
       allComments.forEach(async (item)=>{
         console.log(item.id);
@@ -230,5 +228,6 @@
   newCommentForm.addEventListener("submit", addNewComment);
 
   document.body.addEventListener("click",likeDeleteButton);
+
 
   
