@@ -7,7 +7,7 @@ class BandSiteApi {
     }
 
     async postComment(comment){
-        const bandApiResponse = await axios.post(`${this.baseUrl}comments?api_key=${ this.apiKey}`, comment);
+        const bandApiResponse = await axios.post(`${this.baseUrl}comments?api_key=${this.apiKey}`, comment);
         return bandApiResponse.data;
     }
 
@@ -20,6 +20,15 @@ class BandSiteApi {
 
     async getShows(){
         const bandApiResponse = await axios.get(`${this.baseUrl}showdates?api_key=${this.apiKey}`);
+        return bandApiResponse.data;
+    }
+
+    async likeComment(id){
+        const bandApiResponse = await axios.put(`${this.baseUrl}comments/${id}/like?api_key=${this.apiKey}`);
+        return bandApiResponse.data;
+    }
+    async deleteComment(id){
+        const bandApiResponse = await axios.delete(`${this.baseUrl}comments/${id}?api_key=${this.apiKey}`);
         return bandApiResponse.data;
     }
 }

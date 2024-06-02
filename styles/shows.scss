@@ -1,7 +1,7 @@
 @use './partials/global';
 @use './partials/mixins' as *;
 @use './partials/typography';
-@use './partials/variables';
+@use './partials/variables' as *;
 
 iframe{
     width: 100%;
@@ -20,11 +20,11 @@ table{
 tr{
     padding: 1.5rem 1.125rem;
     &:hover{
-       background-color: variables.$BandSite-Alabaster;
+       background-color: $BandSite-Alabaster;
     }
 }
 th{
-    color: variables.$BandSite-Mercury;
+    color: $BandSite-Mercury;
     font-weight: 700;
     text-align: left;
 }
@@ -35,7 +35,7 @@ td{
 }
 
 .selected{
-    background-color: variables.$BandSite-Mercury !important;
+    background-color: $BandSite-Mercury !important;
 }
 
 .hero-section{
@@ -48,14 +48,14 @@ td{
         gap: 13rem;
     }
     &--shows-background{
-        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
+        background-image: linear-gradient($BandSite-Overlay,$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
     }
     &__right{
         display: flex;
         flex-direction: column;
         h3{
             font-weight: 400;
-            color: variables.$BandSite-White;
+            color: $BandSite-White;
             @include tablet{
                 margin-top: 4rem;
             }
@@ -88,42 +88,40 @@ td{
         gap: 10rem;
         align-items: baseline;
     }
-    &__container{
-        &__content{
-            &__title{
-                color: variables.$BandSite-Mercury;
-                padding-bottom: 0;
-            }
-            &__text{
-                font-weight: 400;
-                padding-top: 0;
-                padding-bottom: 0;
-                &--bold{
-                    font-weight: 600;
-                }
-            }
-            button{
-                margin-top: 1rem;
+    &__container__content{
+        &__title{
+            color: $BandSite-Mercury;
+            padding-bottom: 0;
+        }
+        &__text{
+            font-weight: 400;
+            padding-top: 0;
+            padding-bottom: 0;
+            &--bold{
+                font-weight: 600;
             }
         }
+        button{
+            margin-top: 1rem;
+        }
+        
     }
-    &__table{
-        &__row{
-            &__text{
-                &--bold{
-                    font-weight: 600;
-                }
-            }
-            &--border-bottom{
-                border-bottom: 1px solid variables.$BandSite-Mercury;
-            }
-            &__button{
-                width: 67%;
-                margin-top: 1rem;
-                font-size: variables.$Tablet-Body-Copy-Text-Size;
-                line-height: variables.$Tablet-Body-Copy-Line-Height;
+    &__table__row{
+        &__text{
+            &--bold{
+                font-weight: 600;
             }
         }
+        &--border-bottom{
+            border-bottom: 1px solid $BandSite-Mercury;
+        }
+        &__button{
+            width: 67%;
+            margin-top: 1rem;
+            font-size: $Tablet-Body-Copy-Text-Size;
+            line-height: $Tablet-Body-Copy-Line-Height;
+        }
+        
     }
 }
 

@@ -1,18 +1,18 @@
 @use './partials/global';
 @use './partials/mixins' as *;
 @use './partials/typography';
-@use './partials/variables';
+@use './partials/variables' as *;
 
 .div__image{
     object-fit: cover;
     object-position: center;
     overflow: hidden;
-    margin: variables.$Mobile-Padding; 
+    margin: $Mobile-Padding; 
 }
 
 .hero-section{
     &--bio-background{
-        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
+        background-image: linear-gradient($BandSite-Overlay,$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
     }
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +89,7 @@
 }
 
 .photo-gallery{
-    background-color: variables.$BandSite-Alabaster;
+    background-color: $BandSite-Alabaster;
     &__image-container{
         padding-bottom: 1rem;
     }
@@ -141,19 +141,19 @@
 
 .comments{
     &__form{
-        padding-left:variables.$Mobile-Padding;
+        padding-left:$Mobile-Padding;
         display: flex;
         gap: 1rem;
         margin-top: 2rem;
         @include tablet{
-            padding-left: variables.$Tablet-Padding;
+            padding-left: $Tablet-Padding;
         }
         @include desktop{
             margin-left: 28%;
         }
 
         &__avatar{
-            background-color: variables.$BandSite-Mercury;
+            background-color: $BandSite-Mercury;
             border-radius: 50%;
             width: 2rem;
             height: 2rem;
@@ -191,17 +191,17 @@
                 flex-direction: column;
             }
             label{
-                color: variables.$BandSite-Mercury;
-                font-size: variables.$Mobile-Body-Copy-Text-Size;
-                line-height: variables.$Mobile-Body-Copy-Line-Height;
+                color: $BandSite-Mercury;
+                font-size: $Mobile-Body-Copy-Text-Size;
+                line-height: $Mobile-Body-Copy-Line-Height;
                 font-weight: 700;
                 @include tablet{
-                    font-size: variables.$Tablet-Body-Copy-Text-Size;
-                    line-height: variables.$Tablet-Body-Copy-Line-Height;
+                    font-size: $Tablet-Body-Copy-Text-Size;
+                    line-height: $Tablet-Body-Copy-Line-Height;
                 }
                 @include desktop{
-                    font-size: variables.$Tablet-Body-Copy-Text-Size;
-                    line-height: variables.$Tablet-Body-Copy-Line-Height;
+                    font-size: $Tablet-Body-Copy-Text-Size;
+                    line-height: $Tablet-Body-Copy-Line-Height;
                 }
             }
             button{
@@ -220,7 +220,7 @@
                 height: 2rem;
                 width: 100%;
                 box-sizing: border-box;
-                border: 1px solid variables.$BandSite-Mercury;
+                border: 1px solid $BandSite-Mercury;
                 padding: 0.75rem;
                 border-radius: 4px;
                 margin: 0.25rem 0;
@@ -243,8 +243,12 @@
                         height: 8rem;
                     }
                 }
+                &::placeholder{
+                    color: $BandSite-Black;
+                    
+                }
                 &:active{
-                    border-color: variables.$BandSite-Black;
+                    border-color: $BandSite-Black;
                 }
                 &:invalid{
                     border-color: #D22D2D;
@@ -267,7 +271,7 @@
             padding: 0;
         }
         &__avatar{
-            background-color: variables.$BandSite-Mercury;
+            background-color: $BandSite-Mercury;
             border-radius: 50%;
             width: 2rem;
             height: 2rem;
@@ -294,9 +298,9 @@
             }
         }
         &__inputs{
-            color: variables.$BandSite-Black;
+            color: $BandSite-Black;
             &__time{
-                color: variables.$BandSite-Mercury;
+                color: $BandSite-Mercury;
                 padding:0;
                 position: absolute;
                 right: 1rem;
@@ -317,6 +321,33 @@
             &__comment{
                 text-transform: none;
             }
+            &__buttons{
+                display: flex;
+                gap: 2rem;
+                margin-top: 0.25rem;
+                text-align: center;
+                &__button{
+                    width: 100%;
+                    button{
+                        margin: 0;
+                        @include tablet{
+                            width: 100%;
+                        }
+                        @include desktop{
+                            width: 100%;
+                        }
+                    }
+                    &__like-text{
+                        font-weight: 400;
+                        @include desktop{
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+                
+            }
+
         }
     }
 
