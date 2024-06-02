@@ -1,355 +1,351 @@
-@use './partials/global';
-@use './partials/mixins' as *;
-@use './partials/typography';
-@use './partials/variables' as *;
+@use "./partials/global";
+@use "./partials/mixins" as *;
+@use "./partials/typography";
+@use "./partials/variables" as *;
 
-.div__image{
-    object-fit: cover;
-    object-position: center;
-    overflow: hidden;
-    margin: $Mobile-Padding; 
+.div__image {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  margin: $Mobile-Padding;
 }
 
-.hero-section{
-    &--bio-background{
-        background-image: linear-gradient($BandSite-Overlay,$BandSite-Overlay),url("/assets/Images/hero-bio.jpg");
-    }
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 35vh;
-    @include tablet{
-        height: 70vh;
-    }
-    @include desktop{
-        height: 70vh;
-    }
-    &__title{
-        position: relative;
-        top:45%;
-        left: 1rem;
-    }
+.hero-section {
+  &--bio-background {
+    background-image: linear-gradient($BandSite-Overlay, $BandSite-Overlay),
+      url("/assets/Images/hero-bio.jpg");
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 35vh;
+  @include tablet {
+    height: 70vh;
+  }
+  @include desktop {
+    height: 70vh;
+  }
+  &__title {
+    position: relative;
+    top: 45%;
+    left: 1rem;
+  }
 }
 
-.about-section{
-    .div__image{
-        @include tablet{
-            padding: 0 2.5rem;
-        }
-        @include desktop{
-            padding: 0px 8rem;
-            margin-left: 5rem;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-        }
+.about-section {
+  .div__image {
+    @include tablet {
+      padding: 0 2.5rem;
     }
-    &__quote{
-        p{
-            font-weight: 600;
-            @include tablet{
-                padding-top: 0.75rem;
-            }
-        }
+    @include desktop {
+      padding: 0px 8rem;
+      margin-left: 5rem;
     }
-    h3{
-        @include tablet{
-            padding: 4rem 4rem 1rem 3.25rem;
-        }
-        
+    img {
+      width: 100%;
+      height: 100%;
     }
-    article{
-        @include tablet{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 48rem;
-            padding-left: 3.25rem;
-        }
-        @include desktop{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 65rem;
-            margin-left: 12.5rem;
-        }
-        p{
-            @include tablet{
-                width: 48%;
-                padding-right: 5.25rem;
-            }
-            @include desktop{
-                width: 48%;
-                padding-right: 5.25rem;
-            }
-        }
+  }
+  &__quote {
+    p {
+      font-weight: 600;
+      @include tablet {
+        padding-top: 0.75rem;
+      }
     }
+  }
+  h3 {
+    @include tablet {
+      padding: 4rem 4rem 1rem 3.25rem;
+    }
+  }
+  article {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 48rem;
+      padding-left: 3.25rem;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 65rem;
+      margin-left: 12.5rem;
+    }
+    p {
+      @include tablet {
+        width: 48%;
+        padding-right: 5.25rem;
+      }
+      @include desktop {
+        width: 48%;
+        padding-right: 5.25rem;
+      }
+    }
+  }
 }
 
-.photo-gallery{
-    background-color: $BandSite-Alabaster;
-    &__image-container{
-        padding-bottom: 1rem;
+.photo-gallery {
+  background-color: $BandSite-Alabaster;
+  &__image-container {
+    padding-bottom: 1rem;
+  }
+  .div__image {
+    margin: 0.75rem 0.75rem 0 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
-    .div__image{
-        margin: 0.75rem 0.75rem 0 0 ;
-        
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        &:hover{
-            filter: grayscale(1);
-        }
+    &:hover {
+      filter: grayscale(1);
     }
-    
-    @include tablet{
-        &__image-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: center;
-            .div__image{
-                flex-basis: 28%;
-                padding: 0;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+  }
+
+  @include tablet {
+    &__image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+      .div__image {
+        flex-basis: 28%;
+        padding: 0;
+        img {
+          width: 100%;
+          height: 100%;
         }
+      }
     }
-    @include desktop{
-        &__image-container{
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 7rem;
-            .div__image{
-                flex-basis: 30%;
-                padding: 0;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+  }
+  @include desktop {
+    &__image-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 7rem;
+      .div__image {
+        flex-basis: 30%;
+        padding: 0;
+        img {
+          width: 100%;
+          height: 100%;
         }
+      }
     }
+  }
 }
 
-.comments{
-    &__form{
-        padding-left:$Mobile-Padding;
+.comments {
+  &__form {
+    padding-left: $Mobile-Padding;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    @include tablet {
+      padding-left: $Tablet-Padding;
+    }
+    @include desktop {
+      margin-left: 28%;
+    }
+
+    &__avatar {
+      background-color: $BandSite-Mercury;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      margin-top: 1.5rem;
+      @include tablet {
+        width: 3rem;
+        height: 3rem;
+      }
+      @include desktop {
+        width: 3rem;
+        height: 3rem;
+      }
+      img {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        @include tablet {
+          width: 3rem;
+          height: 3rem;
+        }
+        @include desktop {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+    &__inputs {
+      width: 100%;
+      padding-right: 2rem;
+      @include desktop {
+        width: 52%;
+      }
+      label,
+      input {
         display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-        @include tablet{
-            padding-left: $Tablet-Padding;
+        flex-direction: column;
+      }
+      label {
+        color: $BandSite-Mercury;
+        font-size: $Mobile-Body-Copy-Text-Size;
+        line-height: $Mobile-Body-Copy-Line-Height;
+        font-weight: 700;
+        @include tablet {
+          font-size: $Tablet-Body-Copy-Text-Size;
+          line-height: $Tablet-Body-Copy-Line-Height;
         }
-        @include desktop{
-            margin-left: 28%;
+        @include desktop {
+          font-size: $Tablet-Body-Copy-Text-Size;
+          line-height: $Tablet-Body-Copy-Line-Height;
         }
-
-        &__avatar{
-            background-color: $BandSite-Mercury;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            margin-top: 1.5rem;
-            @include tablet{
-                width: 3rem;
-                height: 3rem;
-            }
-            @include desktop{
-                width: 3rem;
-                height: 3rem;
-            }
-            img{
-                border-radius: 50%;
-                width: 2rem;
-                height: 2rem;
-                @include tablet{
-                    width: 3rem;
-                    height: 3rem;
-                }
-                @include desktop{
-                    width: 3rem;
-                    height: 3rem;
-                }
-            }
+      }
+      button {
+        @include tablet {
+          height: 3.25rem;
+          position: relative;
+          left: 21.6rem;
         }
-        &__inputs{
-            width: 100%;
-            padding-right: 2rem;
-            @include desktop{
-                width: 52%;
-            }
-            label,input{
-                display: flex;
-                flex-direction: column;
-            }
-            label{
-                color: $BandSite-Mercury;
-                font-size: $Mobile-Body-Copy-Text-Size;
-                line-height: $Mobile-Body-Copy-Line-Height;
-                font-weight: 700;
-                @include tablet{
-                    font-size: $Tablet-Body-Copy-Text-Size;
-                    line-height: $Tablet-Body-Copy-Line-Height;
-                }
-                @include desktop{
-                    font-size: $Tablet-Body-Copy-Text-Size;
-                    line-height: $Tablet-Body-Copy-Line-Height;
-                }
-            }
-            button{
-                @include tablet{
-                    height: 3.25rem;
-                    position: relative;
-                    left: 21.6rem;
-                }
-                @include desktop{
-                    position: relative;
-                    left: 17.9rem;
-                    height: 3.25rem;
-                }
-            }
-            &__input{
-                height: 2rem;
-                width: 100%;
-                box-sizing: border-box;
-                border: 1px solid $BandSite-Mercury;
-                padding: 0.75rem;
-                border-radius: 4px;
-                margin: 0.25rem 0;
-                @include tablet{
-                    height: 3rem;
-                    padding: 1rem;
-                }
-                @include desktop{
-                    height: 3rem;
-                    padding: 1rem;
-                }
-                &--textarea{
-                    height: 5rem;
-                    text-transform: none;
-                    @include tablet{
-                        height: 8rem;
-                        margin-bottom: 1.5rem;
- 
-                    }
-                    @include desktop{
-                        height: 8rem;
-                    }
-                }
-                &::placeholder{
-                    color: $BandSite-Black;
-                    
-                }
-                &:active{
-                    border-color: $BandSite-Black;
-                }
-                &:invalid{
-                    border-color: #D22D2D;
-                }
-            }
+        @include desktop {
+          position: relative;
+          left: 17.9rem;
+          height: 3.25rem;
         }
+      }
+      &__input {
+        height: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $BandSite-Mercury;
+        padding: 0.75rem;
+        border-radius: 4px;
+        margin: 0.25rem 0;
+        @include tablet {
+          height: 3rem;
+          padding: 1rem;
+        }
+        @include desktop {
+          height: 3rem;
+          padding: 1rem;
+        }
+        &--textarea {
+          height: 5rem;
+          text-transform: none;
+          @include tablet {
+            height: 8rem;
+            margin-bottom: 1.5rem;
+          }
+          @include desktop {
+            height: 8rem;
+          }
+        }
+        &::placeholder {
+          color: $BandSite-Black;
+        }
+        &:active {
+          border-color: $BandSite-Black;
+        }
+        &:invalid {
+          border-color: #d22d2d;
+        }
+      }
     }
+  }
 }
 
-.posted-comments{
-    @include desktop{
-        margin-left: 23.5rem;
-        width: 38.5%;
+.posted-comments {
+  @include desktop {
+    margin-left: 23.5rem;
+    width: 38.5%;
+  }
+  &__container {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0 1rem 0;
+    @include tablet {
+      padding: 0;
     }
-    &__container{
+    &__avatar {
+      background-color: $BandSite-Mercury;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      @include tablet {
+        width: 3rem;
+        height: 3rem;
+      }
+      @include desktop {
+        width: 3rem;
+        height: 3rem;
+      }
+      img {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        @include tablet {
+          width: 3rem;
+          height: 3rem;
+        }
+        @include desktop {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+    &__inputs {
+      color: $BandSite-Black;
+      &__time {
+        color: $BandSite-Mercury;
+        padding: 0;
+        position: absolute;
+        right: 1rem;
+        @include tablet {
+          right: 4rem;
+        }
+        @include desktop {
+          right: 29rem;
+        }
+      }
+      &__name {
+        font-weight: 700;
+        padding: 0;
+        @include desktop {
+          margin-left: 0;
+        }
+      }
+      &__comment {
+        text-transform: none;
+      }
+      &__buttons {
         display: flex;
         gap: 2rem;
-        margin: 1rem 0 1rem 0;
-        @include tablet{
-            padding: 0;
+        margin-top: 0.25rem;
+        text-align: center;
+        &__button {
+          width: 100%;
+          button {
+            margin: 0;
+            @include tablet {
+              width: 100%;
+            }
+            @include desktop {
+              width: 100%;
+            }
+          }
+          &__like-text {
+            font-weight: 400;
+            @include desktop {
+              padding: 0;
+              margin: 0;
+            }
+          }
         }
-        &__avatar{
-            background-color: $BandSite-Mercury;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            @include tablet{
-                width: 3rem;
-                height: 3rem;
-            }
-            @include desktop{
-                width: 3rem;
-                height: 3rem;
-            }
-            img{
-                border-radius: 50%;
-                width: 2rem;
-                height: 2rem;
-                @include tablet{
-                    width: 3rem;
-                    height: 3rem;
-                }
-                @include desktop{
-                    width: 3rem;
-                    height: 3rem;
-                }
-            }
-        }
-        &__inputs{
-            color: $BandSite-Black;
-            &__time{
-                color: $BandSite-Mercury;
-                padding:0;
-                position: absolute;
-                right: 1rem;
-                @include tablet{
-                    right: 4rem;
-                }
-                @include desktop{
-                    right: 29rem;
-                }
-            }
-            &__name{
-                font-weight: 700;
-                padding:0;
-                @include desktop{
-                    margin-left: 0;
-                }
-            }
-            &__comment{
-                text-transform: none;
-            }
-            &__buttons{
-                display: flex;
-                gap: 2rem;
-                margin-top: 0.25rem;
-                text-align: center;
-                &__button{
-                    width: 100%;
-                    button{
-                        margin: 0;
-                        @include tablet{
-                            width: 100%;
-                        }
-                        @include desktop{
-                            width: 100%;
-                        }
-                    }
-                    &__like-text{
-                        font-weight: 400;
-                        @include desktop{
-                            padding: 0;
-                            margin: 0;
-                        }
-                    }
-                }
-                
-            }
-
-        }
+      }
     }
-
+  }
 }
