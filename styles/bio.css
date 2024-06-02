@@ -879,6 +879,11 @@ nav ul li a:hover {
   margin-top: 0.25rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .posted-comments__container__inputs__buttons {
+    width: 16rem;
+  }
+}
 .posted-comments__container__inputs__buttons__button {
   width: 100%;
 }

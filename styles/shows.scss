@@ -1,59 +1,13 @@
-<<<<<<< HEAD
-@use './partials/global';
-@use './partials/mixins' as *;
-@use './partials/typography';
-<<<<<<< HEAD
-@use './partials/variables' as *;
-=======
-@use './partials/variables';
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-=======
 @use "./partials/global";
 @use "./partials/mixins" as *;
 @use "./partials/typography";
 @use "./partials/variables" as *;
->>>>>>> sprint-3
 
 iframe {
   width: 100%;
   height: 9rem;
   @include tablet {
     margin-top: 2rem;
-<<<<<<< HEAD
-    width: 49rem;
-}
-tr{
-    padding: 1.5rem 1.125rem;
-    &:hover{
-<<<<<<< HEAD
-       background-color: $BandSite-Alabaster;
-    }
-}
-th{
-    color: $BandSite-Mercury;
-=======
-       background-color: variables.$BandSite-Alabaster;
-    }
-}
-th{
-    color: variables.$BandSite-Mercury;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-    font-weight: 700;
-    text-align: left;
-}
-td{
-    font-weight: 400;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.selected{
-<<<<<<< HEAD
-    background-color: $BandSite-Mercury !important;
-=======
-    background-color: variables.$BandSite-Mercury !important;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-=======
     width: 61%;
   }
 }
@@ -78,7 +32,6 @@ td {
   font-weight: 400;
   padding-top: 0;
   padding-bottom: 0;
->>>>>>> sprint-3
 }
 
 .selected {
@@ -111,48 +64,6 @@ td {
         margin-left: 5rem;
       }
     }
-<<<<<<< HEAD
-    &--shows-background{
-<<<<<<< HEAD
-        background-image: linear-gradient($BandSite-Overlay,$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
-=======
-        background-image: linear-gradient(variables.$BandSite-Overlay,variables.$BandSite-Overlay),url("/assets/Images/hero-shows.jpg");
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-    }
-    &__right{
-        display: flex;
-        flex-direction: column;
-        h3{
-            font-weight: 400;
-<<<<<<< HEAD
-            color: $BandSite-White;
-=======
-            color: variables.$BandSite-White;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-            @include tablet{
-                margin-top: 4rem;
-            }
-            @include desktop{
-                margin-left: 5rem;
-            }
-        }
-        h1{
-            margin-bottom: 1rem;
-            width: 14rem;
-            text-transform: none;
-            @include tablet{
-                width: 34rem;
-            }
-            @include desktop{
-                width: 31rem;
-            }
-        }
-    }
-    &__left{
-        @include desktop{
-            margin-top: 5rem;
-        }
-=======
     h1 {
       margin-bottom: 1rem;
       width: 14rem;
@@ -168,7 +79,6 @@ td {
   &__left {
     @include desktop {
       margin-top: 5rem;
->>>>>>> sprint-3
     }
   }
 }
@@ -184,81 +94,6 @@ td {
       color: $BandSite-Mercury;
       padding-bottom: 0;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    &__container__content{
-        &__title{
-            color: $BandSite-Mercury;
-            padding-bottom: 0;
-        }
-        &__text{
-            font-weight: 400;
-            padding-top: 0;
-            padding-bottom: 0;
-            &--bold{
-                font-weight: 600;
-            }
-        }
-        button{
-            margin-top: 1rem;
-        }
-        
-    }
-    &__table__row{
-        &__text{
-            &--bold{
-                font-weight: 600;
-            }
-        }
-        &--border-bottom{
-            border-bottom: 1px solid $BandSite-Mercury;
-        }
-        &__button{
-            width: 67%;
-            margin-top: 1rem;
-            font-size: $Tablet-Body-Copy-Text-Size;
-            line-height: $Tablet-Body-Copy-Line-Height;
-        }
-        
-=======
-    &__container{
-        &__content{
-            &__title{
-                color: variables.$BandSite-Mercury;
-                padding-bottom: 0;
-            }
-            &__text{
-                font-weight: 400;
-                padding-top: 0;
-                padding-bottom: 0;
-                &--bold{
-                    font-weight: 600;
-                }
-            }
-            button{
-                margin-top: 1rem;
-            }
-        }
-    }
-    &__table{
-        &__row{
-            &__text{
-                &--bold{
-                    font-weight: 600;
-                }
-            }
-            &--border-bottom{
-                border-bottom: 1px solid variables.$BandSite-Mercury;
-            }
-            &__button{
-                width: 67%;
-                margin-top: 1rem;
-                font-size: variables.$Tablet-Body-Copy-Text-Size;
-                line-height: variables.$Tablet-Body-Copy-Line-Height;
-            }
-        }
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
-=======
     &__text {
       font-weight: 400;
       padding-top: 0;
@@ -269,7 +104,6 @@ td {
     }
     button {
       margin-top: 1rem;
->>>>>>> sprint-3
     }
   }
   &__table__row {

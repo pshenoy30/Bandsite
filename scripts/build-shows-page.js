@@ -1,36 +1,7 @@
-<<<<<<< HEAD
 import BandSiteApi from "./band-site-api.js";
 import BAND_API_KEY from "./band-site-api.js";
 
 const bandApi = new BandSiteApi(BAND_API_KEY);
-=======
-const showsContent = [
-    { date: "Mon Sept 09 2024", 
-      venue:"Ronald Lane",
-      location: "San Francisco, CA",
-    },
-    { date: "Tue Sept 17 2024", 
-      venue:"Pier 3 East",
-      location: "San Francisco, CA"
-    },
-    { date: "Sat Oct 12 2024", 
-      venue:"View Lounge",
-      location: "San Francisco, CA",
-    },
-    { date: "Sat Nov 16 2024", 
-      venue:"Hyatt Agency",
-      location: "San Francisco, CA",
-    },
-    { date: "Fri Nov 29 2024", 
-      venue:"Moscow Center",
-      location: "San Francisco, CA",
-    },
-    { date: "Wed Dec 18 2024", 
-      venue:"Press Club",
-      location: "San Francisco, CA",
-    }
-];
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
 
 const showContentArray = ["DATE","VENUE","LOCATION"];
 
@@ -45,7 +16,6 @@ function createElementWithClass(tag, className1, className2) {
     return newElement;
 }
 
-<<<<<<< HEAD
  //function to format the date
  function dateFormattor(timestamp){
   let current = new Date(timestamp)
@@ -56,8 +26,6 @@ function createElementWithClass(tag, className1, className2) {
   return (month+"/"+day+"/"+year)
 }
 
-=======
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
 //Function to create shows in the mobile format
 function showsElementMobile(showsObj,titleObj) {
     const showsElement = createElementWithClass("article", "shows-section__container");
@@ -72,13 +40,9 @@ function showsElementMobile(showsObj,titleObj) {
 
     // Create and append date content
     const dateElementContent = createElementWithClass("h3","shows-section__container__content__text", "shows-section__container__content__text--bold");
-<<<<<<< HEAD
     const dateElementContentText = dateFormattor(showsObj.date);
     console.log(dateElementContentText);
     dateElementContent.innerText = dateElementContentText;
-=======
-    dateElementContent.innerText = showsObj.date;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     showsContainerElement.appendChild(dateElementContent);
 
     // Create and append venue title
@@ -88,11 +52,7 @@ function showsElementMobile(showsObj,titleObj) {
 
     // Create and append venue element
     const venueElementContent = createElementWithClass("h3","shows-section__container__content__text");
-<<<<<<< HEAD
     venueElementContent.innerText = showsObj.place;
-=======
-    venueElementContent.innerText = showsObj.venue;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     showsContainerElement.appendChild(venueElementContent);
 
     // Create and append location title
@@ -136,21 +96,13 @@ function showsElementTabletDesktop(showsObj,titleObj) {
     
     // Create and append date element
     const dateElementContent = createElementWithClass("td","shows-section__table__row__text", "shows-section__table__row__text--bold");
-<<<<<<< HEAD
     const dateElementContentText = dateFormattor(item.date);
     dateElementContent.innerText = dateElementContentText;
-=======
-    dateElementContent.innerText = item.date;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     showsElementContentRow.appendChild(dateElementContent);
 
     // Create and append venue element
     const venueElementContent = createElementWithClass("td","shows-section__table__row__text");
-<<<<<<< HEAD
     venueElementContent.innerText = item.place;
-=======
-    venueElementContent.innerText = item.venue;
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
     showsElementContentRow.appendChild(venueElementContent);
 
     // Create and append location element
@@ -191,11 +143,7 @@ function displayShows(shows) {
     }
   }
 
-<<<<<<< HEAD
   displayShows(await bandApi.getShows());
-=======
-  displayShows(showsContent);
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
 
   const tableElement = document.querySelector(".shows-section__table");
   tableElement.addEventListener("click", (event)=>{ 
@@ -205,8 +153,4 @@ function displayShows(shows) {
     }
     const row = event.target.closest("tr");
     row.classList.add("selected");
-<<<<<<< HEAD
   });
-=======
-  });
->>>>>>> 60bddbf9c7713edda913d6eba00bfdf039887788
