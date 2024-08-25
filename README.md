@@ -5,6 +5,7 @@ BandSite is a template website for band to enlighten the audience about them and
 
 ## Key Features
 - The site is responsive for mobile, tablet and desktop
+- The site data is filled using an API
 - Upon hovering over the images in the photo gallery, the images in the photogallery are grayscaled
 - Upon clicking the email id in the footer, the user will be able to email the band
 - Comments section allows the user to add a new comment
@@ -20,7 +21,8 @@ BandSite is a template website for band to enlighten the audience about them and
 - REST API
 
 ## Site Image
-
+<img width="100%" src="assets/Images/Desktop Page 1.png" alt="Home Page" />
+<img width="100%" src="assets/Images/Desktop Page 2.png" alt="Shows Page" />
 
 ## Success Criteria
 1. The site is responsive from 320px to 1920px
